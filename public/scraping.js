@@ -13,8 +13,24 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
 
     var $ = cheerio.load(html);
 
-    const countryF = $('#countryF').next();
+    // all the li in the ul = list of etablissements in France
+    const list = $('#countryF').next().children().next();
+    //console.log(list.html());
 
-    console.log(countryF.html());
+    // to get only the name and link
+    list.children().each((i, el) => {
+      const name = $(el)
+        .find('a')
+        .first()
+        .text()
+        .replace(/\s\s+/g, ''); //to delete the blank space that are useless
+
+      const link = $(el)
+        .find('a')
+        .first()
+        .attr('href');
+
+      console.log(name, link);
+    });
   }
 });
