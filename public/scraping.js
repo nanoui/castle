@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const writeStream = fs.createWriteStream('relais.csv');
 // headers in the csv
-writeStream.write(`Name, Link \n`);
+writeStream.write(`Hotel name, Restaurant name \n`);
 
 /*
    scrap the sitemap in "List of Relais & Chateaux's properties" = the etablissements
@@ -20,26 +20,51 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
     var $ = cheerio.load(html);
 
     // all the li in the ul = list of etablissements in France
-    const list = $('#countryF').next().children().next();
+    const list = $('#countryF').next().first().children().next();
     //console.log(list.html());
 
     // to get only the name and link
     list.children().each((i, el) => {
-      const name = $(el)
+      const hotelName = $(el)
         .find('a')
         .first()
         .text()
         .replace(/\s\s+/g, ''); //to delete the blank space that are useless
 
-      const link = $(el)
+      const hotelLink = $(el)
         .find('a')
         .first()
         .attr('href');
 
-      //console.log(name, link);
+      // go on the link to scrape the name of the restaurant attached
+      request(hotelLink, (error, response, html) => {
+          if (!error && response.statusCode == 200) {
 
-      //write row to csv
-      writeStream.write(`${name}, ${link} \n`);
+            var c = cheerio.load(html);
+
+            const restaurantLink = c('.jsSecondNavMain').children().next().find('a');
+
+            if (restaurantLink.first().find('span').text() === "Restaurant") {
+              const l = restaurantLink.first().attr('href');
+
+
+              request(l, (error, response, html) => {
+                if(!error && response.statusCode == 200) {
+
+                  var a = cheerio.load(html);
+
+                  const restaurantName = a('.hotelTabsHeaderTitle').find('h3').text().replace(/\s\s+/g, '');
+                  //console.log(hotelName, hotelLink, restaurantName, l);
+
+                  //write row to csv
+                  writeStream.write(`${hotelName}, ${restaurantName} \n`);
+                }
+              })
+            }
+          }
+      })
+
+      //console.log(hotelName, hotelLink);
     });
 
     console.log('Scraping done...');
