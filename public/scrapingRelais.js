@@ -42,24 +42,45 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
 
             var c = cheerio.load(html);
 
-            const restaurantLink = c('.jsSecondNavMain').children().next().find('a');
+            if (c('.jsSecondNavSub').length > 0) {
 
-            if (restaurantLink.first().find('span').text() === "Restaurant") {
-              const l = restaurantLink.first().attr('href');
+              if(c('.jsSecondNavMain').children().next().find('a').first().find('span').text() === "Restaurant") {
+                const otherRestaurantLink = c('.jsSecondNavSub')
 
+                otherRestaurantLink.children().each((i, el) => {
+                  const restaurantName = c(el)
+                    .find('a')
+                    .text()
+                    .replace(/\s\s+/g, '');
 
-              request(l, (error, response, html) => {
-                if(!error && response.statusCode == 200) {
-
-                  var a = cheerio.load(html);
-
-                  const restaurantName = a('.hotelTabsHeaderTitle').find('h3').text().replace(/\s\s+/g, '');
-                  //console.log(hotelName, hotelLink, restaurantName, l);
+                  //console.log(hotelName, restaurantName);
 
                   //write row to csv
                   writeStream.write(`${hotelName}, ${restaurantName} \n`);
-                }
-              })
+                })
+              }
+            }
+
+            else {
+              const restaurantLink = c('.jsSecondNavMain').children().next().find('a');
+
+              if (restaurantLink.first().find('span').text() === "Restaurant") {
+                const l = restaurantLink.first().attr('href');
+
+
+                request(l, (error, response, html) => {
+                  if(!error && response.statusCode == 200) {
+
+                    var a = cheerio.load(html);
+
+                    const restaurantName = a('.hotelTabsHeaderTitle').find('h3').text().replace(/\s\s+/g, '');
+                    //console.log(hotelName, restaurantName);
+
+                    //write row to csv
+                    writeStream.write(`${hotelName}, ${restaurantName} \n`);
+                  }
+                })
+              }
             }
           }
       })
