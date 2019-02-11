@@ -53,11 +53,44 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
                     .text()
                     .replace(/\s\s+/g, '');
 
-                  //console.log(hotelName, restaurantName);
+                  if (restaurantName === "Other restaurants") {
+                    const otherRestaurant = c(el)
+                      .find('a')
+                      .first()
+                      .attr('href');
 
-                  //write row to csv
-                  writeStream.write(`${hotelName}, ${restaurantName} \n`);
-                })
+                    request(otherRestaurant, (error, response, html) => {
+                      if (!error && response.statusCode == 200) {
+                        var b = cheerio.load(html);
+
+                        const div = b('.hotelTabsHeader');
+
+                        div.children().each((i, el) => {
+                          const otherRestaurantName = b(el)
+                            .find('.mainTitle2.noVerticalMargin.other-restaurant-title')
+                            .text()
+                            .replace(/\s\s+/g, '');
+
+                          if (otherRestaurantName != "") {
+                            //console.log(hotelName, otherRestaurantName);
+
+                            //write row to csv
+                            writeStream.write(`${hotelName}, ${otherRestaurantName} \n`);
+                          }
+                        });
+                      }
+                    })
+                  }
+
+                  else {
+                    //console.log(hotelName, restaurantName);
+
+                    //write row to csv
+                    writeStream.write(`${hotelName}, ${restaurantName} \n`);
+                  }
+
+                  //console.log(hotelName, restaurantName);
+                });
               }
             }
 
