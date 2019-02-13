@@ -8,6 +8,7 @@ const writeStream = fs.createWriteStream('relais.csv');
 // headers in the csv
 writeStream.write(`Hotel name, Restaurant name \n`);
 
+
 /*
    scrap the sitemap in "List of Relais & Chateaux's properties" = the etablissements
    In this list of etablissement, we are interested in the division "France", listing the french hotels and restaurants

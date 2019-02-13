@@ -1,0 +1,834 @@
+[
+ {
+  "Hotelname": "Hostellerie de Levernois",
+  "Restaurantname": " Le Gastronomique "
+ },
+ {
+  "Hotelname": "Hostellerie de Levernois",
+  "Restaurantname": " Le Bistrot du Bord de l'Eau "
+ },
+ {
+  "Hotelname": "Hôtel Le Chabichou Restaurants & Spa",
+  "Restaurantname": " Le Chabichou "
+ },
+ {
+  "Hotelname": "Hôtel Le Chabichou Restaurants & Spa",
+  "Restaurantname": " Le Chabotté "
+ },
+ {
+  "Hotelname": "Château de Mercuès",
+  "Restaurantname": " Le Duèze "
+ },
+ {
+  "Hotelname": "Château de Mercuès",
+  "Restaurantname": " Le Bistrot du Château "
+ },
+ {
+  "Hotelname": "Hôtel Restaurant Auberge du Père Bise – Jean Sulpice",
+  "Restaurantname": " Auberge du Père Bise - Jean Sulpice "
+ },
+ {
+  "Hotelname": "Hôtel Restaurant Auberge du Père Bise – Jean Sulpice",
+  "Restaurantname": " Le Bistrot 1903 "
+ },
+ {
+  "Hotelname": "La Pyramide Patrick Henriroux",
+  "Restaurantname": " La Pyramide Patrick Henriroux "
+ },
+ {
+  "Hotelname": "La Pyramide Patrick Henriroux",
+  "Restaurantname": " L'Espace PH3 "
+ },
+ {
+  "Hotelname": "Hôtel Impérial Garoupe",
+  "Restaurantname": " Le Pavillon "
+ },
+ {
+  "Hotelname": "Hôtel Impérial Garoupe",
+  "Restaurantname": " Pavillon Beach "
+ },
+ {
+  "Hotelname": "Château de Riell",
+  "Restaurantname": " Restaurant du Châtelain "
+ },
+ {
+  "Hotelname": "Château de Riell",
+  "Restaurantname": " Café Casals "
+ },
+ {
+  "Hotelname": "Au Cœur du Village Hôtel & Spa",
+  "Restaurantname": " Restaurant Gourmand le Cœur "
+ },
+ {
+  "Hotelname": "Au Cœur du Village Hôtel & Spa",
+  "Restaurantname": " Restaurant Gastronomique le Cinq "
+ },
+ {
+  "Hotelname": "Hôtel Crillon le Brave",
+  "Restaurantname": " Restaurant La Madeleine "
+ },
+ {
+  "Hotelname": "Coquillade Village",
+  "Restaurantname": " Le Gourmet "
+ },
+ {
+  "Hotelname": "Château de Berne",
+  "Restaurantname": " Le Jardin de Benjamin "
+ },
+ {
+  "Hotelname": "Château de Berne",
+  "Restaurantname": " Le Bistrot "
+ },
+ {
+  "Hotelname": "Royal Champagne Hotel & Spa",
+  "Restaurantname": " Le Royal "
+ },
+ {
+  "Hotelname": "Château de Valmer",
+  "Restaurantname": " La Palmeraie "
+ },
+ {
+  "Hotelname": "Château de Valmer",
+  "Restaurantname": " La Piscine "
+ },
+ {
+  "Hotelname": "Les Hauts de Loire",
+  "Restaurantname": " Le Restaurant des Hauts de Loire "
+ },
+ {
+  "Hotelname": "Les Hauts de Loire",
+  "Restaurantname": " Bistrot des Hauts de Loire "
+ },
+ {
+  "Hotelname": "Hôtel & Spa du Castellet",
+  "Restaurantname": " Restaurant Christophe Bacquié "
+ },
+ {
+  "Hotelname": "Hôtel & Spa du Castellet",
+  "Restaurantname": " San Felice "
+ },
+ {
+  "Hotelname": "Château de Courcelles",
+  "Restaurantname": " Château de Courcelles "
+ },
+ {
+  "Hotelname": "Hostellerie de Plaisance",
+  "Restaurantname": " La Table de Plaisance "
+ },
+ {
+  "Hotelname": "Hostellerie de Plaisance",
+  "Restaurantname": " L'Envers du Décor "
+ },
+ {
+  "Hotelname": "Le Chambard",
+  "Restaurantname": " La Table d'Olivier Nasti "
+ },
+ {
+  "Hotelname": "Le Chambard",
+  "Restaurantname": " La Winstub "
+ },
+ {
+  "Hotelname": "Maison Doucet",
+  "Restaurantname": " Restaurant Frédéric Doucet "
+ },
+ {
+  "Hotelname": "Maison Doucet",
+  "Restaurantname": " Bistrot du Quai "
+ },
+ {
+  "Hotelname": "Domaine d’Auriac",
+  "Restaurantname": " Le restaurant Bernard Rigaudis "
+ },
+ {
+  "Hotelname": "Domaine d’Auriac",
+  "Restaurantname": " Le Bistrot d'Auriac "
+ },
+ {
+  "Hotelname": "Abbaye de la Bussière",
+  "Restaurantname": " Gastronomique "
+ },
+ {
+  "Hotelname": "Abbaye de la Bussière",
+  "Restaurantname": " Bistrot des Moines "
+ },
+ {
+  "Hotelname": "Domaine Les Crayères",
+  "Restaurantname": " Le restaurant gastronomique « Le Parc » ** "
+ },
+ {
+  "Hotelname": "Domaine Les Crayères",
+  "Restaurantname": " La Brasserie « Le Jardin » "
+ },
+ {
+  "Hotelname": "Maison Pic",
+  "Restaurantname": " Anne-Sophie Pic - Le Restaurant "
+ },
+ {
+  "Hotelname": "Maison Pic",
+  "Restaurantname": " André "
+ },
+ {
+  "Hotelname": "La Grenouillère",
+  "Restaurantname": " La Grenouillère "
+ },
+ {
+  "Hotelname": "La Grenouillère",
+  "Restaurantname": " Froggy's Tavern "
+ },
+ {
+  "Hotelname": "Troisgros",
+  "Restaurantname": " Le Bois sans Feuilles "
+ },
+ {
+  "Hotelname": "Hôtel et Restaurant Régis et Jacques Marcon",
+  "Restaurantname": " Restaurant Régis et Jacques Marcon "
+ },
+ {
+  "Hotelname": "Hôtel et Restaurant Régis et Jacques Marcon",
+  "Restaurantname": " La Coulemelle "
+ },
+ {
+  "Hotelname": "Le Mas des Herbes Blanches",
+  "Restaurantname": " La Table du Mas "
+ },
+ {
+  "Hotelname": "Le Mas des Herbes Blanches",
+  "Restaurantname": " Le Bistrot du Mas "
+ },
+ {
+  "Hotelname": "Baumanière Hôtel & Spa",
+  "Restaurantname": " L'Oustau de Baumanière "
+ },
+ {
+  "Hotelname": "Maison Lameloise",
+  "Restaurantname": " Maison Lameloise "
+ },
+ {
+  "Hotelname": "Maison Lameloise",
+  "Restaurantname": " Pierre & Jean "
+ },
+ {
+  "Hotelname": "Moulin de l’Abbaye",
+  "Restaurantname": " Moulin de l'Abbaye "
+ },
+ {
+  "Hotelname": "Hôtel Restaurant Clos des Sens - Laurent PETIT",
+  "Restaurantname": " Restaurant Clos des Sens - Laurent PETIT "
+ },
+ {
+  "Hotelname": "Hôtel Restaurant Clos des Sens - Laurent PETIT",
+  "Restaurantname": " Café Brunet "
+ },
+ {
+  "Hotelname": "Auberge des Templiers",
+  "Restaurantname": " Auberge des Templiers "
+ },
+ {
+  "Hotelname": "Anne de Bretagne",
+  "Restaurantname": " Anne de Bretagne "
+ },
+ {
+  "Hotelname": "Auberge du Jeu de Paume",
+  "Restaurantname": " La Table du Connétable "
+ },
+ {
+  "Hotelname": "Auberge du Jeu de Paume",
+  "Restaurantname": " Le Jardin d'Hiver "
+ },
+ {
+  "Hotelname": "Grand Hôtel de Cala Rossa & Spa",
+  "Restaurantname": " La Table de Cala Rossa "
+ },
+ {
+  "Hotelname": "Grand Hôtel de Cala Rossa & Spa",
+  "Restaurantname": " La Pinède "
+ },
+ {
+  "Hotelname": "Castel Clara Thalasso & Spa",
+  "Restaurantname": " Le 180° "
+ },
+ {
+  "Hotelname": "Castel Clara Thalasso & Spa",
+  "Restaurantname": " Le Café Clara "
+ },
+ {
+  "Hotelname": "Le Relais Bernard Loiseau – Spa Loiseau des Sens",
+  "Restaurantname": " Bernard Loiseau "
+ },
+ {
+  "Hotelname": "Le Relais Bernard Loiseau – Spa Loiseau des Sens",
+  "Restaurantname": " Loiseau des Sens "
+ },
+ {
+  "Hotelname": "Le Vieux Logis",
+  "Restaurantname": " Le Vieux Logis "
+ },
+ {
+  "Hotelname": "Le Vieux Logis",
+  "Restaurantname": " Le Bistrot "
+ },
+ {
+  "Hotelname": "Château de La Chèvre d’Or",
+  "Restaurantname": " La Chèvre d'Or "
+ },
+ {
+  "Hotelname": "La Bastide de Saint-Tropez",
+  "Restaurantname": " L’Olivier "
+ },
+ {
+  "Hotelname": "La Bastide de Saint-Tropez",
+  "Restaurantname": " Le Bistro de la Bastide "
+ },
+ {
+  "Hotelname": "Le Domaine de Verchant",
+  "Restaurantname": " Verchant "
+ },
+ {
+  "Hotelname": "Le Domaine de Verchant",
+  "Restaurantname": " La Plage dans les Vignes "
+ },
+ {
+  "Hotelname": "Monte-Carlo Beach",
+  "Restaurantname": " Elsa 1 Michelin star "
+ },
+ {
+  "Hotelname": "Le Saint-James Bouliac",
+  "Restaurantname": " Le Saint-James Bouliac "
+ },
+ {
+  "Hotelname": "Le Saint-James Bouliac",
+  "Restaurantname": " Le Café de L'Espérance "
+ },
+ {
+  "Hotelname": "Le Mas de Pierre",
+  "Restaurantname": " La Table de Pierre "
+ },
+ {
+  "Hotelname": "Le Mas de Pierre",
+  "Restaurantname": " Lis Orto "
+ },
+ {
+  "Hotelname": "Domaine de la Bretesche Golf & Spa",
+  "Restaurantname": " Le Montaigu "
+ },
+ {
+  "Hotelname": "Domaine de la Bretesche Golf & Spa",
+  "Restaurantname": " Le Club "
+ },
+ {
+  "Hotelname": "La Chapelle Saint-Martin",
+  "Restaurantname": " La Chapelle Saint Martin "
+ },
+ {
+  "Hotelname": "Michel Trama",
+  "Restaurantname": " Restaurant Michel Trama "
+ },
+ {
+  "Hotelname": "Michel Trama",
+  "Restaurantname": " L'Auberge de la Poule d'Or "
+ },
+ {
+  "Hotelname": "La Côte Saint Jacques & Spa",
+  "Restaurantname": " La côte saint-jacques "
+ },
+ {
+  "Hotelname": "La Côte Saint Jacques & Spa",
+  "Restaurantname": " Bien Etre & Saveurs "
+ },
+ {
+  "Hotelname": "Cap d’Antibes Beach Hotel",
+  "Restaurantname": " Les Pêcheurs "
+ },
+ {
+  "Hotelname": "Cap d’Antibes Beach Hotel",
+  "Restaurantname": " Le Cap "
+ },
+ {
+  "Hotelname": "Georges Blanc Parc & Spa",
+  "Restaurantname": " Restaurant Gastronomique Georges BLANC "
+ },
+ {
+  "Hotelname": "Georges Blanc Parc & Spa",
+  "Restaurantname": " l'Ancienne Auberge 1900 "
+ },
+ {
+  "Hotelname": "Hameau Albert Ier",
+  "Restaurantname": " Albert 1er "
+ },
+ {
+  "Hotelname": "Hameau Albert Ier",
+  "Restaurantname": " La Maison Carrier "
+ },
+ {
+  "Hotelname": "Le Petit Nice-Passedat",
+  "Restaurantname": " Le Petit Nice "
+ },
+ {
+  "Hotelname": "Le Petit Nice-Passedat",
+  "Restaurantname": " Le 1917 "
+ },
+ {
+  "Hotelname": "Restaurant Serge Vieira",
+  "Restaurantname": " Restaurant Serge Vieira "
+ },
+ {
+  "Hotelname": "Restaurant Serge Vieira",
+  "Restaurantname": " Sodade "
+ },
+ {
+  "Hotelname": "Flocons de Sel",
+  "Restaurantname": " Flocons de Sel "
+ },
+ {
+  "Hotelname": "Flocons de Sel",
+  "Restaurantname": " Flocons Village "
+ },
+ {
+  "Hotelname": "Hôtel Les Barmes de l'Ours",
+  "Restaurantname": " La Table de l'Ours "
+ },
+ {
+  "Hotelname": "Château Cordeillan-Bages",
+  "Restaurantname": " Restaurant Cordeillan-Bages "
+ },
+ {
+  "Hotelname": "Château Cordeillan-Bages",
+  "Restaurantname": " Café Lavinal "
+ },
+ {
+  "Hotelname": "Jiva Hill Resort",
+  "Restaurantname": " Restaurant Shamwari "
+ },
+ {
+  "Hotelname": "Jiva Hill Resort",
+  "Restaurantname": " Le Jardin "
+ },
+ {
+  "Hotelname": "Le Phébus & Spa - Villa des Anges",
+  "Restaurantname": " La Table de Xavier Mathieu "
+ },
+ {
+  "Hotelname": "Le Phébus & Spa - Villa des Anges",
+  "Restaurantname": " Le Café de la Fontaine "
+ },
+ {
+  "Hotelname": "Château de Fonscolombe",
+  "Restaurantname": " L'Orangerie "
+ },
+ {
+  "Hotelname": "Assiette Champenoise",
+  "Restaurantname": " L'Assiette Champenoise "
+ },
+ {
+  "Hotelname": "Château de Codignat",
+  "Restaurantname": " Château de Codignat "
+ },
+ {
+  "Hotelname": "Château de Bagnols",
+  "Restaurantname": 1217
+ },
+ {
+  "Hotelname": "Château d’Audrieu",
+  "Restaurantname": " Le Séran "
+ },
+ {
+  "Hotelname": "Grand Hôtel du Lion d’Or",
+  "Restaurantname": " Grand Hôtel du Lion d'Or "
+ },
+ {
+  "Hotelname": "Hotel Ile de la Lagune Thalasso & Spa",
+  "Restaurantname": " Restaurant l'Almandin "
+ },
+ {
+  "Hotelname": "Hostellerie La Cheneaudière & Spa",
+  "Restaurantname": " Hostellerie La Cheneaudière & Spa "
+ },
+ {
+  "Hotelname": "Château Lafaurie-Peyraguey Hôtel & Restaurant LALIQUE",
+  "Restaurantname": " Restaurant LALIQUE "
+ },
+ {
+  "Hotelname": "Château de Rochegude",
+  "Restaurantname": " Roche Aiguë "
+ },
+ {
+  "Hotelname": "Relais de la Poste",
+  "Restaurantname": " Relais de la Poste "
+ },
+ {
+  "Hotelname": "Relais de la Poste",
+  "Restaurantname": " L'Auberge Côté Quillier "
+ },
+ {
+  "Hotelname": "Le Château de Beaulieu",
+  "Restaurantname": " Le Meurin "
+ },
+ {
+  "Hotelname": "Le Château de Beaulieu",
+  "Restaurantname": " Le Jardin d'Alice "
+ },
+ {
+  "Hotelname": "Les Prés d’Eugénie - Maison Guérard",
+  "Restaurantname": " Restaurant Michel Guérard "
+ },
+ {
+  "Hotelname": "Château de Montreuil",
+  "Restaurantname": " Château de Montreuil "
+ },
+ {
+  "Hotelname": "Le Club de Cavalière & Spa",
+  "Restaurantname": " La Vieille Fontaine "
+ },
+ {
+  "Hotelname": "Baumanière Hôtel & Spa",
+  "Restaurantname": " La Cabro d'Or "
+ },
+ {
+  "Hotelname": "Baumanière Hôtel & Spa",
+  "Restaurantname": " Table d'hôtes - La Cabro d'Or "
+ },
+ {
+  "Hotelname": "La Réserve",
+  "Restaurantname": " La Réserve "
+ },
+ {
+  "Hotelname": "Clarance Hôtel",
+  "Restaurantname": " La Table "
+ },
+ {
+  "Hotelname": "Hôtel de la Plage",
+  "Restaurantname": " Hôtel de la Plage "
+ },
+ {
+  "Hotelname": "Château de Noirieux",
+  "Restaurantname": " La Table de Noirieux "
+ },
+ {
+  "Hotelname": "Villa Gallici",
+  "Restaurantname": " Villa Gallici "
+ },
+ {
+  "Hotelname": "Le Suquet",
+  "Restaurantname": " Sébastien Bras"
+ },
+ {
+  "Hotelname": "Hôtel du Bois Blanc",
+  "Restaurantname": " La Terrasse des Etangs "
+ },
+ {
+  "Hotelname": "Le Couvent des Minimes Hôtel & Spa L'Occitane",
+  "Restaurantname": " Le Cloître "
+ },
+ {
+  "Hotelname": "Le Couvent des Minimes Hôtel & Spa L'Occitane",
+  "Restaurantname": " Pesquier "
+ },
+ {
+  "Hotelname": "Les Maisons de Bricourt",
+  "Restaurantname": " Le Coquillage "
+ },
+ {
+  "Hotelname": "Hôtel Splendide Royal Paris",
+  "Restaurantname": " Ristorante Tosca"
+ },
+ {
+  "Hotelname": "La Bonne Étape",
+  "Restaurantname": " La Bonne Étape "
+ },
+ {
+  "Hotelname": "La Bonne Étape",
+  "Restaurantname": " Au Goût du Jour "
+ },
+ {
+  "Hotelname": "Les Hautes Roches",
+  "Restaurantname": " Les Hautes Roches "
+ },
+ {
+  "Hotelname": "Brittany & Spa",
+  "Restaurantname": " Le Brittany "
+ },
+ {
+  "Hotelname": "L'Auberge Basque",
+  "Restaurantname": " La Table de l'Auberge Basque "
+ },
+ {
+  "Hotelname": "Troisgros",
+  "Restaurantname": " Le Central "
+ },
+ {
+  "Hotelname": "Troisgros",
+  "Restaurantname": " La Colline du Colombier "
+ },
+ {
+  "Hotelname": "Château de La Chèvre d’Or",
+  "Restaurantname": " Terrasse Les Remparts "
+ },
+ {
+  "Hotelname": "Château de La Chèvre d’Or",
+  "Restaurantname": " Les Remparts "
+ },
+ {
+  "Hotelname": "Château de La Chèvre d’Or",
+  "Restaurantname": " Le Café du Jardin "
+ },
+ {
+  "Hotelname": "Hôtel Restaurant En Marge",
+  "Restaurantname": " En Marge "
+ },
+ {
+  "Hotelname": "Château des Avenières",
+  "Restaurantname": " Le \"M\" "
+ },
+ {
+  "Hotelname": "Auberge des Glazicks",
+  "Restaurantname": " L'Auberge des Glazicks "
+ },
+ {
+  "Hotelname": "Manoir de Lan-Kerellec",
+  "Restaurantname": " Manoir de Lan-Kerellec "
+ },
+ {
+  "Hotelname": "La Bastide Saint-Antoine",
+  "Restaurantname": " La Bastide Saint-Antoine "
+ },
+ {
+  "Hotelname": "L’Hôtel de Toiras & Villa Clarisse",
+  "Restaurantname": " La Table d'Olivia "
+ },
+ {
+  "Hotelname": "Domaine de Rochevilaine",
+  "Restaurantname": " Domaine de Rochevilaine "
+ },
+ {
+  "Hotelname": "Villa Florentine",
+  "Restaurantname": " Les Terrasses de Lyon "
+ },
+ {
+  "Hotelname": "Cazaudehore « La Forestière »",
+  "Restaurantname": " Cazaudehore "
+ },
+ {
+  "Hotelname": "La Signoria & Spa",
+  "Restaurantname": " La Signoria "
+ },
+ {
+  "Hotelname": "Le Castel Marie-Louise",
+  "Restaurantname": " Castel Marie-Louise "
+ },
+ {
+  "Hotelname": "Le Grand Cœur & Spa",
+  "Restaurantname": " Le Grand Coeur & Spa "
+ },
+ {
+  "Hotelname": "Hôtel-Spa La Bouitte – Restaurant René et Maxime Meilleur",
+  "Restaurantname": " Restaurant René & Maxime Meilleur "
+ },
+ {
+  "Hotelname": "Royal Champagne Hotel & Spa",
+  "Restaurantname": " Le Bellevue "
+ },
+ {
+  "Hotelname": "Royal Champagne Hotel & Spa",
+  "Restaurantname": " Le Bellevue Bar "
+ },
+ {
+  "Hotelname": "Coquillade Village",
+  "Restaurantname": " Le Bistrot ou le Jardin dans les Vignes "
+ },
+ {
+  "Hotelname": "Coquillade Village",
+  "Restaurantname": " Ristorante "
+ },
+ {
+  "Hotelname": "Monte-Carlo Beach",
+  "Restaurantname": " La Pizzeria "
+ },
+ {
+  "Hotelname": "Monte-Carlo Beach",
+  "Restaurantname": " Le Deck "
+ },
+ {
+  "Hotelname": "Monte-Carlo Beach",
+  "Restaurantname": " La Vigie Lounge & Restaurant "
+ },
+ {
+  "Hotelname": "Château de Drudas",
+  "Restaurantname": " Le Verdurier "
+ },
+ {
+  "Hotelname": "Moulin de l’Abbaye",
+  "Restaurantname": " Au Fil du Temps "
+ },
+ {
+  "Hotelname": "Moulin de l’Abbaye",
+  "Restaurantname": " Au Fil de l'Eau "
+ },
+ {
+  "Hotelname": "Hôtel Les Barmes de l'Ours",
+  "Restaurantname": " La Rôtisserie des Barmes "
+ },
+ {
+  "Hotelname": "Hôtel Les Barmes de l'Ours",
+  "Restaurantname": " Coin Savoyard "
+ },
+ {
+  "Hotelname": "La Grande Maison de Bernard Magrez",
+  "Restaurantname": " Restaurant Pierre Gagnaire à La Grande Maison de Bernard Magrez "
+ },
+ {
+  "Hotelname": "Hostellerie La Briqueterie",
+  "Restaurantname": " Restaurant de l'Hostellerie la Briqueterie "
+ },
+ {
+  "Hotelname": "Château de la Treyne",
+  "Restaurantname": " Château de la Treyne "
+ },
+ {
+  "Hotelname": "Château de Curzay",
+  "Restaurantname": " Les Quatre Saisons "
+ },
+ {
+  "Hotelname": "Hotel & Restaurant Thierry Drapeau",
+  "Restaurantname": " Restaurant Thierry Drapeau "
+ },
+ {
+  "Hotelname": "Bas Rupts",
+  "Restaurantname": " Bas Rupts "
+ },
+ {
+  "Hotelname": "La Bastide de Capelongue",
+  "Restaurantname": " Restaurant Edouard Loubet "
+ },
+ {
+  "Hotelname": "La Chapelle Saint-Martin",
+  "Restaurantname": " La Table du Couvent "
+ },
+ {
+  "Hotelname": "La Chapelle Saint-Martin",
+  "Restaurantname": " Le 27 Restaurant "
+ },
+ {
+  "Hotelname": "Château de Noizay",
+  "Restaurantname": " Le Castel "
+ },
+ {
+  "Hotelname": "Hôtel Crillon le Brave",
+  "Restaurantname": " La Table du Ventoux "
+ },
+ {
+  "Hotelname": "Hôtel Crillon le Brave",
+  "Restaurantname": " La Grange "
+ },
+ {
+  "Hotelname": "Les Prés d’Eugénie - Maison Guérard",
+  "Restaurantname": " Auberge de La Ferme aux Grives "
+ },
+ {
+  "Hotelname": "Les Prés d’Eugénie - Maison Guérard",
+  "Restaurantname": " Le Café Mère Poule "
+ },
+ {
+  "Hotelname": "Yoann Conte – Bord du Lac Hôtel Restaurant",
+  "Restaurantname": " Hôtel Restaurant Yoann Conte – Bord du Lac "
+ },
+ {
+  "Hotelname": "Yoann Conte – Bord du Lac Hôtel Restaurant",
+  "Restaurantname": " Yoann Côté Jardin "
+ },
+ {
+  "Hotelname": "Maison Decoret",
+  "Restaurantname": " Jacques Decoret "
+ },
+ {
+  "Hotelname": "Tiara Yaktsa",
+  "Restaurantname": " Restaurant L'Or Bleu "
+ },
+ {
+  "Hotelname": "Le Saint-Paul",
+  "Restaurantname": " Le Saint-Paul "
+ },
+ {
+  "Hotelname": "La Maison des Bois – Marc Veyrat",
+  "Restaurantname": " La Maison des Bois – Marc Veyrat "
+ },
+ {
+  "Hotelname": "Le Clos",
+  "Restaurantname": " Le Clos "
+ },
+ {
+  "Hotelname": "Villa René Lalique",
+  "Restaurantname": " Villa René Lalique "
+ },
+ {
+  "Hotelname": "L’Arnsbourg Restaurant et Hôtel",
+  "Restaurantname": " L'Arnsbourg "
+ },
+ {
+  "Hotelname": "Château de Locguénolé",
+  "Restaurantname": " Château de Locguénolé "
+ },
+ {
+  "Hotelname": "Les Bergeries de Palombaggia",
+  "Restaurantname": " La Table de Mina "
+ },
+ {
+  "Hotelname": "Pan Deï Palais",
+  "Restaurantname": " Pan Deï Palais "
+ },
+ {
+  "Hotelname": "Saint James Paris",
+  "Restaurantname": " Restaurant du Saint James Paris "
+ },
+ {
+  "Hotelname": "La Maison d'Uzès",
+  "Restaurantname": " La Table d'Uzès "
+ },
+ {
+  "Hotelname": "Le Prieuré Baumanière",
+  "Restaurantname": " Le Prieuré "
+ },
+ {
+  "Hotelname": "Château de Mirambeau",
+  "Restaurantname": " Château de Mirambeau "
+ },
+ {
+  "Hotelname": "Château de Germigney",
+  "Restaurantname": " Château de Germigney "
+ },
+ {
+  "Hotelname": "Château de Germigney",
+  "Restaurantname": " Bistrot le Pontarlier "
+ },
+ {
+  "Hotelname": "La Bastide",
+  "Restaurantname": " La Table de La Bastide "
+ },
+ {
+  "Hotelname": "La Villa Calvi",
+  "Restaurantname": " La Table by La Villa "
+ },
+ {
+  "Hotelname": "La Ferme Saint-Siméon",
+  "Restaurantname": " La Ferme Saint-Siméon "
+ },
+ {
+  "Hotelname": "La Ferme Saint-Siméon",
+  "Restaurantname": " Bistro La Boucane "
+ },
+ {
+  "Hotelname": "Hôtel Parc Victoria",
+  "Restaurantname": " Les Lierres "
+ },
+ {
+  "Hotelname": "La Bastide de Capelongue",
+  "Restaurantname": " La Bergerie d’Edouard Loubet "
+ },
+ {
+  "Hotelname": "La Bastide de Capelongue",
+  "Restaurantname": " Bar à Jus "
+ },
+ {
+  "Hotelname": "Château d’Adoménil",
+  "Restaurantname": " Chateau d'Adomenil "
+ }
+]
