@@ -11,10 +11,10 @@ let fileOutputName2 = 'michelin.json';
 
 //generate JSON file
 
-csvToJson.fieldDelimiter(',') .getJsonFromCsv(fileInputName);
+csvToJson.fieldDelimiter('~') .getJsonFromCsv(fileInputName);
 csvToJson.formatValueByType().getJsonFromCsv(fileInputName);
 csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
 
-csvToJson.fieldDelimiter(',') .getJsonFromCsv(fileInputName2);
+csvToJson.fieldDelimiter('~') .getJsonFromCsv(fileInputName2);
 csvToJson.formatValueByType().getJsonFromCsv(fileInputName2);
 csvToJson.generateJsonFileFromCsv(fileInputName2,fileOutputName2);

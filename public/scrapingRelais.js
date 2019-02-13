@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const writeStream = fs.createWriteStream('relais.csv');
 // headers in the csv
-writeStream.write(`Hotel name, Restaurant name \n`);
+writeStream.write(`Hotel Name~ Departement~ Citation~ Description~ Nombre de Chambre~ Prix~ Restaurant Name~ Lien \n`);
 
 
 /*
@@ -46,6 +46,14 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
             if (c('.jsSecondNavSub').length > 0) {
 
               if(c('.jsSecondNavMain').children().next().find('a').first().find('span').text() === "Restaurant") {
+
+                const hotelDepartement = c('.titleExtraInfo').text().replace(/\s\s+/g, '');
+                const hotelCitation = c('.citationMsg').text().replace(/\s\s+/g, '');
+                const hotelDescription = c('.richTextMargin').text().replace(/\s\s+/g, '');
+                const hotelNombreChambre = c('.capacity').text().replace(/\s\s+/g, '');
+                const hotelPrix = c('.innerHotelHeader').children().next().children().find('.price').text().replace(/\s\s+/g, '');
+
+
                 const otherRestaurantLink = c('.jsSecondNavSub')
 
                 otherRestaurantLink.children().each((i, el) => {
@@ -74,9 +82,9 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
 
                           if (otherRestaurantName != "") {
                             //console.log(hotelName, otherRestaurantName);
-
+                            //console.log(hotelName, hotelDepartement, hotelCitation, hotelDescription, hotelNombreChambre, hotelPrix);
                             //write row to csv
-                            writeStream.write(`${hotelName}, ${otherRestaurantName} \n`);
+                            writeStream.write(`${hotelName}~ ${hotelDepartement}~ ${hotelCitation}~ ${hotelDescription}~ ${hotelNombreChambre}~ ${hotelPrix}~ ${otherRestaurantName}~ ${hotelLink} \n`);
                           }
                         });
                       }
@@ -85,9 +93,9 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
 
                   else {
                     //console.log(hotelName, restaurantName);
-
+                    //console.log(hotelName, hotelDepartement, hotelCitation, hotelDescription, hotelNombreChambre, hotelPrix);
                     //write row to csv
-                    writeStream.write(`${hotelName}, ${restaurantName} \n`);
+                    writeStream.write(`${hotelName}~ ${hotelDepartement}~ ${hotelCitation}~ ${hotelDescription}~ ${hotelNombreChambre}~ ${hotelPrix}~ ${restaurantName}~ ${hotelLink} \n`);
                   }
 
                   //console.log(hotelName, restaurantName);
@@ -99,6 +107,14 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
               const restaurantLink = c('.jsSecondNavMain').children().next().find('a');
 
               if (restaurantLink.first().find('span').text() === "Restaurant") {
+
+                const hotelDepartement = c('.titleExtraInfo').text().replace(/\s\s+/g, '');
+                const hotelCitation = c('.citationMsg').text().replace(/\s\s+/g, '');
+                const hotelDescription = c('.richTextMargin').text().replace(/\s\s+/g, '');
+                const hotelNombreChambre = c('.capacity').text().replace(/\s\s+/g, '');
+                const hotelPrix = c('.innerHotelHeader').children().next().children().find('.price').text().replace(/\s\s+/g, '');
+
+
                 const l = restaurantLink.first().attr('href');
 
 
@@ -109,9 +125,9 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
 
                     const restaurantName = a('.hotelTabsHeaderTitle').find('h3').text().replace(/\s\s+/g, '');
                     //console.log(hotelName, restaurantName);
-
+                    //console.log(hotelName, hotelDepartement, hotelCitation, hotelDescription, hotelNombreChambre, hotelPrix);
                     //write row to csv
-                    writeStream.write(`${hotelName}, ${restaurantName} \n`);
+                    writeStream.write(`${hotelName}~ ${hotelDepartement}~ ${hotelCitation}~ ${hotelDescription}~ ${hotelNombreChambre}~ ${hotelPrix}~ ${restaurantName}~ ${hotelLink} \n`);
                   }
                 })
               }
@@ -119,7 +135,6 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
           }
       })
 
-      //console.log(hotelName, hotelLink);
     });
 
     console.log('Scraping done...');
