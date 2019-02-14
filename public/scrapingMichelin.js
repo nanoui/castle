@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const writeStream = fs.createWriteStream('michelin.csv');
 // headers in the csv
-writeStream.write(`Restaurant name \n`);
+writeStream.write(`Restaurant Name~ Nombre Etoile \n`);
 
 /*
    scrap all the restaurants of the Michelin guide
@@ -29,10 +29,24 @@ for (page=1; page<=35; page++) {
           .text()
           .replace(/\s\s+/g, '');
 
-        //console.log(restaurantName);
+        var nombreEtoile = "";
+
+        if ($(el).find('.poi_card-display-guide').children().find('.guide-icon.icon-mr.icon-cotation1etoile').length > 0) {
+          nombreEtoile = "1 etoile";
+        }
+
+        if ($(el).find('.poi_card-display-guide').children().find('.guide-icon.icon-mr.icon-cotation2etoiles').length > 0) {
+          nombreEtoile = "2 etoiles";
+        }
+
+        if ($(el).find('.poi_card-display-guide').children().find('.guide-icon.icon-mr.icon-cotation3etoiles').length > 0) {
+          nombreEtoile = "3 etoiles";
+        }
+
+        //console.log(restaurantName, nombreEtoile);
 
         //write row to csv
-        writeStream.write(`${restaurantName} \n`);
+        writeStream.write(`${restaurantName}~ ${nombreEtoile} \n`);
       });
     }
 
