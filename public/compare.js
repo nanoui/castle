@@ -1,4 +1,1527 @@
-[
+"use strict";
+
+//list of hotel&restaurant from relais chateaux
+const hotelInfo = [
+ {
+  "Hotel": "La Bonne Étape",
+  "Departement": " (Alpes-de-Haute-Provence)",
+  "NumberOfRooms": " 19Rooms",
+  "Price": 158,
+  "Lien": " https://www.relaischateaux.com/us/france/bonneetape-alpes-de-haute-provence-chateau-arnoux "
+ },
+ {
+  "Hotel": "Georges Blanc Parc & Spa",
+  "Departement": " (Ain)",
+  "NumberOfRooms": " 42Rooms",
+  "Price": 250,
+  "Lien": " https://www.relaischateaux.com/us/france/blanc-ain-vonnas "
+ },
+ {
+  "Hotel": "Le Château de Beaulieu",
+  "Departement": " (Pas-de-Calais)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/chateaubeaulieu-pas-de-calais-busnes "
+ },
+ {
+  "Hotel": "Château de La Chèvre d’Or",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 40Rooms",
+  "Price": 237,
+  "Lien": " https://www.relaischateaux.com/us/france/chevredor-alpes-maritimes-eze-village "
+ },
+ {
+  "Hotel": "Château de Drudas",
+  "Departement": " (Haute Garonne)",
+  "NumberOfRooms": " 23Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/chateau-de-drudas "
+ },
+ {
+  "Hotel": "Le Saint-James Bouliac",
+  "Departement": " (Gironde)",
+  "NumberOfRooms": " 18Rooms",
+  "Price": 175,
+  "Lien": " https://www.relaischateaux.com/us/france/stjames-gironde-bouliac "
+ },
+ {
+  "Hotel": "Brittany & Spa",
+  "Departement": " (Finistère)",
+  "NumberOfRooms": " 33Rooms",
+  "Price": 167,
+  "Lien": " https://www.relaischateaux.com/us/france/brittany-finistere-roscoff "
+ },
+ {
+  "Hotel": "La Signoria & Spa",
+  "Departement": " (Corse)",
+  "NumberOfRooms": " 30Rooms",
+  "Price": 352,
+  "Lien": " https://www.relaischateaux.com/us/france/signoria-corse-calvi "
+ },
+ {
+  "Hotel": "Relais de la Poste",
+  "Departement": " (Landes)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 162,
+  "Lien": " https://www.relaischateaux.com/us/france/poste-landes-magescq "
+ },
+ {
+  "Hotel": "Clarance Hôtel",
+  "Departement": " (Nord)",
+  "NumberOfRooms": " 19Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/clarance-hotel-nord "
+ },
+ {
+  "Hotel": "Le Mas des Herbes Blanches",
+  "Departement": " (Vaucluse)",
+  "NumberOfRooms": " 48Rooms",
+  "Price": 218,
+  "Lien": " https://www.relaischateaux.com/us/france/masherbes-vaucluse-joucas "
+ },
+ {
+  "Hotel": "Hôtel Parc Victoria",
+  "Departement": " (Pyrénées-Atlantiques)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 160,
+  "Lien": " https://www.relaischateaux.com/us/france/parcvictoria-pyrenees-atlantiques-saint-jean-de-luz "
+ },
+ {
+  "Hotel": "Hôtel Le Chabichou Restaurants & Spa",
+  "Departement": " (Savoie)",
+  "NumberOfRooms": " 41Rooms",
+  "Price": 470,
+  "Lien": " https://www.relaischateaux.com/us/france/chabichou-savoie-courchevel-1850 "
+ },
+ {
+  "Hotel": "Le Domaine de Verchant",
+  "Departement": " (Hérault)",
+  "NumberOfRooms": " 27Rooms",
+  "Price": 216,
+  "Lien": " https://www.relaischateaux.com/us/france/verchant-herault-montpellier "
+ },
+ {
+  "Hotel": "Domaine d’Auriac",
+  "Departement": " (Aude)",
+  "NumberOfRooms": " 21Rooms",
+  "Price": 200,
+  "Lien": " https://www.relaischateaux.com/us/france/auriac-aude-carcassonne "
+ },
+ {
+  "Hotel": "Abbaye de la Bussière",
+  "Departement": " (Côte-d’Or)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 225,
+  "Lien": " https://www.relaischateaux.com/us/france/bussiere-cote-d-or-la-bussiere-sur-ouche "
+ },
+ {
+  "Hotel": "Le Clos",
+  "Departement": " (Normandie)",
+  "NumberOfRooms": " 12Rooms",
+  "Price": 220,
+  "Lien": " https://www.relaischateaux.com/us/france/leclos-normandie-verneuil-sur-avre "
+ },
+ {
+  "Hotel": "Domaine Les Crayères",
+  "Departement": " (Marne)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 380,
+  "Lien": " https://www.relaischateaux.com/us/france/crayeres-marne-reims "
+ },
+ {
+  "Hotel": "Le Couvent des Minimes Hôtel & Spa L'Occitane",
+  "Departement": " (Alpes-de-Haute-Provence)",
+  "NumberOfRooms": " 46Rooms",
+  "Price": 224,
+  "Lien": " https://www.relaischateaux.com/us/france/minimes-alpes-de-haute-provence-mane "
+ },
+ {
+  "Hotel": "La Maison d'Uzès",
+  "Departement": " (Gard)",
+  "NumberOfRooms": " 9Rooms",
+  "Price": 131,
+  "Lien": " https://www.relaischateaux.com/us/france/maisonduzes-gard-uzes "
+ },
+ {
+  "Hotel": "Château de Courcelles",
+  "Departement": " (Aisne)",
+  "NumberOfRooms": " 18Rooms",
+  "Price": 205,
+  "Lien": " https://www.relaischateaux.com/us/france/courcelles-aisne-courcelles-sur-vesle "
+ },
+ {
+  "Hotel": "Castel Clara Thalasso & Spa",
+  "Departement": " (Morbihan)",
+  "NumberOfRooms": " 63Rooms",
+  "Price": 140,
+  "Lien": " https://www.relaischateaux.com/us/france/castelclara-morbihan-bangor "
+ },
+ {
+  "Hotel": "Le Vieux Logis",
+  "Departement": " (Dordogne)",
+  "NumberOfRooms": " 24Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/vieuxlogis-dordogne-tremolat "
+ },
+ {
+  "Hotel": "Cazaudehore « La Forestière »",
+  "Departement": " (Yvelines)",
+  "NumberOfRooms": " 30Rooms",
+  "Price": 151,
+  "Lien": " https://www.relaischateaux.com/us/france/cazaudehore-yvelines-saint-germain-en-laye "
+ },
+ {
+  "Hotel": "Château de Mirambeau",
+  "Departement": " (Charente-Maritime)",
+  "NumberOfRooms": " 40Rooms",
+  "Price": 191,
+  "Lien": " https://www.relaischateaux.com/us/france/mirambeau-charente-maritime-mirambeau "
+ },
+ {
+  "Hotel": "Hôtel de la Plage",
+  "Departement": " (Finistère)",
+  "NumberOfRooms": " 19Rooms",
+  "Price": 176.4,
+  "Lien": " https://www.relaischateaux.com/us/france/laplage-finistere-sainte-anne-la-palud "
+ },
+ {
+  "Hotel": "Château de Codignat",
+  "Departement": " (Puy-de-Dôme)",
+  "NumberOfRooms": " 19Rooms",
+  "Price": 136,
+  "Lien": " https://www.relaischateaux.com/us/france/codignat-puy-de-dome-bort-l-etang "
+ },
+ {
+  "Hotel": "Les Maisons de Bricourt",
+  "Departement": " (Ille-et-Vilaine)",
+  "NumberOfRooms": " 13Rooms",
+  "Price": 195,
+  "Lien": " https://www.relaischateaux.com/us/france/bricourt-ille-et-vilaine-saint-meloir-des-ondes "
+ },
+ {
+  "Hotel": "Hostellerie de Plaisance",
+  "Departement": " (Gironde)",
+  "NumberOfRooms": " 21Rooms",
+  "Price": 280,
+  "Lien": " https://www.relaischateaux.com/us/france/plaisance-gironde-saint-emilion "
+ },
+ {
+  "Hotel": "La Bastide de Saint-Tropez",
+  "Departement": " (Var)",
+  "NumberOfRooms": " 26Rooms",
+  "Price": 220,
+  "Lien": " https://www.relaischateaux.com/us/france/tropez-var-saint-tropez "
+ },
+ {
+  "Hotel": "Château de Montreuil",
+  "Departement": " (Pas-de-Calais)",
+  "NumberOfRooms": " 10Rooms",
+  "Price": 248,
+  "Lien": " https://www.relaischateaux.com/us/france/montreuil-pas-de-calais-montreuil "
+ },
+ {
+  "Hotel": "Hôtel Splendide Royal Paris",
+  "Departement": " (Paris)",
+  "NumberOfRooms": " 12Rooms",
+  "Price": 510,
+  "Lien": " https://www.relaischateaux.com/us/france/hotel-splendide-royal-paris "
+ },
+ {
+  "Hotel": "La Réserve",
+  "Departement": " (Tarn)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 206,
+  "Lien": " https://www.relaischateaux.com/us/france/reservealbi-tarn-albi "
+ },
+ {
+  "Hotel": "Tiara Yaktsa",
+  "Departement": " (Alpes Maritimes)",
+  "NumberOfRooms": " 21Rooms",
+  "Price": 240,
+  "Lien": " https://www.relaischateaux.com/us/france/yaktsa-alpes-maritimes-theoule-sur-mer "
+ },
+ {
+  "Hotel": "Hotel & Restaurant Thierry Drapeau",
+  "Departement": " (Vendée)",
+  "NumberOfRooms": " 14Rooms",
+  "Price": 520,
+  "Lien": " https://www.relaischateaux.com/us/france/thierrydrapeau-vendee-saint-sulpice-le-verdon "
+ },
+ {
+  "Hotel": "Monte-Carlo Beach",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 40Rooms",
+  "Price": 186,
+  "Lien": " https://www.relaischateaux.com/us/france/montecarlo-alpes-maritimes-roquebrune-cap-martin "
+ },
+ {
+  "Hotel": "Le Prieuré Baumanière",
+  "Departement": " (Gard)",
+  "NumberOfRooms": " 37Rooms",
+  "Price": 188,
+  "Lien": " https://www.relaischateaux.com/us/france/leprieure-gard-villeneuve-lez-avignon "
+ },
+ {
+  "Hotel": "Hôtel Les Barmes de l'Ours",
+  "Departement": " (Savoie)",
+  "NumberOfRooms": " 76Rooms",
+  "Price": 325,
+  "Lien": " https://www.relaischateaux.com/us/france/barmes-de-l-ours-savoie "
+ },
+ {
+  "Hotel": "Au Cœur du Village Hôtel & Spa",
+  "Departement": " (Rhône-Alpes)",
+  "NumberOfRooms": " 54Rooms",
+  "Price": 435,
+  "Lien": " https://www.relaischateaux.com/us/france/coeurduvillage-rhone-alpes-la-clusaz "
+ },
+ {
+  "Hotel": "Château de Curzay",
+  "Departement": " (Vienne)",
+  "NumberOfRooms": " 22Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/curzay-vienne-curzay-sur-vonne "
+ },
+ {
+  "Hotel": "Château de Locguénolé",
+  "Departement": " (Morbihan)",
+  "NumberOfRooms": " 22Rooms",
+  "Price": 159,
+  "Lien": " https://www.relaischateaux.com/us/france/locguenole-morbihan-kervignac "
+ },
+ {
+  "Hotel": "Coquillade Village",
+  "Departement": " (Vaucluse)",
+  "NumberOfRooms": " 63Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/coquillade-vaucluse-gargas "
+ },
+ {
+  "Hotel": "Hôtel-Spa La Bouitte – Restaurant René et Maxime Meilleur",
+  "Departement": " (Savoie)",
+  "NumberOfRooms": " 15Rooms",
+  "Price": 290,
+  "Lien": " https://www.relaischateaux.com/us/france/la-bouitte-savoie "
+ },
+ {
+  "Hotel": "Hostellerie La Cheneaudière & Spa",
+  "Departement": " (Bas-Rhin)",
+  "NumberOfRooms": " 38Rooms",
+  "Price": 265,
+  "Lien": " https://www.relaischateaux.com/us/france/cheneaudiere-bas-rhin-colroy-la-roche "
+ },
+ {
+  "Hotel": "L’Arnsbourg Restaurant et Hôtel",
+  "Departement": " (Moselle)",
+  "NumberOfRooms": " 12Rooms",
+  "Price": 175,
+  "Lien": " https://www.relaischateaux.com/us/france/arnsbourg-moselle-baerenthal "
+ },
+ {
+  "Hotel": "La Chapelle Saint-Martin",
+  "Departement": " (Haute-Vienne)",
+  "NumberOfRooms": " 13Rooms&1 villa",
+  "Price": 135,
+  "Lien": " https://www.relaischateaux.com/us/france/chapelle-haute-vienne-nieul "
+ },
+ {
+  "Hotel": "La Bastide de Capelongue",
+  "Departement": " (Vaucluse)",
+  "NumberOfRooms": " 18Rooms&1 villa",
+  "Price": 113,
+  "Lien": " https://www.relaischateaux.com/us/france/capelongue-vaucluse-bonnieux-en-provence "
+ },
+ {
+  "Hotel": "Maison Pic",
+  "Departement": " (Drôme)",
+  "NumberOfRooms": " 15Rooms",
+  "Price": 238,
+  "Lien": " https://www.relaischateaux.com/us/france/pic-drome-valence "
+ },
+ {
+  "Hotel": "Domaine de la Bretesche Golf & Spa",
+  "Departement": " (Loire-Atlantique)",
+  "NumberOfRooms": " 31Rooms&2 villas",
+  "Price": 170.1,
+  "Lien": " https://www.relaischateaux.com/us/france/bretesche-loire-atlantique-missillac "
+ },
+ {
+  "Hotel": "Troisgros",
+  "Departement": " (Loire)",
+  "NumberOfRooms": " 15Rooms",
+  "Price": 400,
+  "Lien": " https://www.relaischateaux.com/us/france/troisgros-loire-ouches "
+ },
+ {
+  "Hotel": "Flocons de Sel",
+  "Departement": " (Haute-Savoie)",
+  "NumberOfRooms": " 11Rooms&1 villa",
+  "Price": 430,
+  "Lien": " https://www.relaischateaux.com/us/france/flocons-haute-savoie-megeve "
+ },
+ {
+  "Hotel": "Assiette Champenoise",
+  "Departement": " (Champagne-Ardenne)",
+  "NumberOfRooms": " 33Rooms",
+  "Price": 185.5,
+  "Lien": " https://www.relaischateaux.com/us/france/assiette-champenoise-champagne-ardenne-tinqueux "
+ },
+ {
+  "Hotel": "Manoir de Lan-Kerellec",
+  "Departement": " (Côtes-d'Armor)",
+  "NumberOfRooms": " 18Rooms",
+  "Price": 209,
+  "Lien": " https://www.relaischateaux.com/us/france/lankerellec-cotes-d-armor-trebeurden "
+ },
+ {
+  "Hotel": "Château de Noirieux",
+  "Departement": " (Maine-et-Loire)",
+  "NumberOfRooms": " 19Rooms",
+  "Price": 80,
+  "Lien": " https://www.relaischateaux.com/us/france/noirieux-maine-et-loire-briollay "
+ },
+ {
+  "Hotel": "Baumanière Hôtel & Spa",
+  "Departement": " (Bouches-du-Rhône)",
+  "NumberOfRooms": " 54Rooms",
+  "Price": 225,
+  "Lien": " https://www.relaischateaux.com/us/france/baumaniere-hotel-spa-les-baux-de-provence "
+ },
+ {
+  "Hotel": "Saint James Paris",
+  "Departement": " (Ile de France)",
+  "NumberOfRooms": " 47Rooms&2 villas",
+  "Price": 355.5,
+  "Lien": " https://www.relaischateaux.com/us/france/saintjames-paris-ile-de-france-paris "
+ },
+ {
+  "Hotel": "Anne de Bretagne",
+  "Departement": " (Loire-Atlantique)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 72.5,
+  "Lien": " https://www.relaischateaux.com/us/france/annedebretagne-loire-atlantique-la-plaine-sur-mer "
+ },
+ {
+  "Hotel": "Yoann Conte – Bord du Lac Hôtel Restaurant",
+  "Departement": " (Haute-Savoie)",
+  "NumberOfRooms": " 8Rooms",
+  "Price": 210,
+  "Lien": " https://www.relaischateaux.com/us/france/yoannconte-haute-savoie-veyrier-du-lac "
+ },
+ {
+  "Hotel": "Michel Trama",
+  "Departement": " (Lot-et-Garonne)",
+  "NumberOfRooms": " 10Rooms",
+  "Price": 220,
+  "Lien": " https://www.relaischateaux.com/us/france/aubergade-lot-et-garonne-puymirol "
+ },
+ {
+  "Hotel": "Villa René Lalique",
+  "Departement": " (Bas-Rhin)",
+  "NumberOfRooms": " 6Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/lalique-bas-rhin "
+ },
+ {
+  "Hotel": "Royal Champagne Hotel & Spa",
+  "Departement": " (Marne)",
+  "NumberOfRooms": " 49Rooms",
+  "Price": 390,
+  "Lien": " https://www.relaischateaux.com/us/france/royalchampagne-marne-champillon "
+ },
+ {
+  "Hotel": "L'Auberge Basque",
+  "Departement": " (Pyrénées-Atlantiques)",
+  "NumberOfRooms": " 11Rooms&1 villa",
+  "Price": 101.15,
+  "Lien": " https://www.relaischateaux.com/us/france/auberge-basque-saint-pee-sur-nivelle-pyrenees-atlantiques "
+ },
+ {
+  "Hotel": "L’Hôtel de Toiras & Villa Clarisse",
+  "Departement": " (Charente-Maritime)",
+  "NumberOfRooms": " 29Rooms&1 villa",
+  "Price": 220,
+  "Lien": " https://www.relaischateaux.com/us/france/toiras-charente-maritime-saint-martin-de-re "
+ },
+ {
+  "Hotel": "Villa Gallici",
+  "Departement": " (Bouches-du-Rhône)",
+  "NumberOfRooms": " 23Rooms",
+  "Price": 295,
+  "Lien": " https://www.relaischateaux.com/us/france/gallici-bouches-du-rhone-aix-en-provence "
+ },
+ {
+  "Hotel": "Les Prés d’Eugénie - Maison Guérard",
+  "Departement": " (Landes)",
+  "NumberOfRooms": " 45Rooms&2 villas",
+  "Price": 250,
+  "Lien": " https://www.relaischateaux.com/us/france/guerard-landes-eugenie-les-bains "
+ },
+ {
+  "Hotel": "Hôtel Restaurant Auberge du Père Bise – Jean Sulpice",
+  "Departement": " (Haute-Savoie)",
+  "NumberOfRooms": " 23Rooms",
+  "Price": 206,
+  "Lien": " https://www.relaischateaux.com/us/france/bise-haute-savoie-talloires "
+ },
+ {
+  "Hotel": "La Maison des Bois – Marc Veyrat",
+  "Departement": " (Haute-Savoie)",
+  "NumberOfRooms": " 5Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/marcveyrat-haute-savoie-manigod "
+ },
+ {
+  "Hotel": "Château de Berne",
+  "Departement": " (Var)",
+  "NumberOfRooms": " 27Rooms",
+  "Price": 215,
+  "Lien": " https://www.relaischateaux.com/us/france/berne-var-lorgues "
+ },
+ {
+  "Hotel": "Château de la Treyne",
+  "Departement": " (Lot)",
+  "NumberOfRooms": " 17Rooms",
+  "Price": 250,
+  "Lien": " https://www.relaischateaux.com/us/france/treyne-lot-lacave "
+ },
+ {
+  "Hotel": "Auberge du Jeu de Paume",
+  "Departement": " (Oise)",
+  "NumberOfRooms": " 92Rooms",
+  "Price": 263.5,
+  "Lien": " https://www.relaischateaux.com/us/france/jeudepaume-oise-chantilly "
+ },
+ {
+  "Hotel": "Château Cordeillan-Bages",
+  "Departement": " (Gironde)",
+  "NumberOfRooms": " 28Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/cordeillan-gironde-pauillac "
+ },
+ {
+  "Hotel": "Le Club de Cavalière & Spa",
+  "Departement": " (Var)",
+  "NumberOfRooms": " 37Rooms",
+  "Price": 410,
+  "Lien": " https://www.relaischateaux.com/us/france/cavaliere-var-le-lavandou-cavaliere "
+ },
+ {
+  "Hotel": "Château de Fonscolombe",
+  "Departement": " (Bouches-du-Rhône)",
+  "NumberOfRooms": " 50Rooms",
+  "Price": 180,
+  "Lien": " https://www.relaischateaux.com/us/france/fonscolombe-bouches-du-rhone "
+ },
+ {
+  "Hotel": "La Grenouillère",
+  "Departement": " (Pas-de-Calais)",
+  "NumberOfRooms": " 11Rooms",
+  "Price": 180,
+  "Lien": " https://www.relaischateaux.com/us/france/lagrenouillere-pas-de-calais-la-madelaine-sous-montreuil "
+ },
+ {
+  "Hotel": "Château de Bagnols",
+  "Departement": " (Rhône-Alpes)",
+  "NumberOfRooms": " 27Rooms",
+  "Price": 199.2,
+  "Lien": " https://www.relaischateaux.com/us/france/bagnols-rhone-alpes "
+ },
+ {
+  "Hotel": "Auberge des Glazicks",
+  "Departement": " (Finistère)",
+  "NumberOfRooms": " 8Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/auberge-des-glazicks-plomodiern "
+ },
+ {
+  "Hotel": "La Villa Calvi",
+  "Departement": " (Haute-Corse)",
+  "NumberOfRooms": " 48Rooms&3 villas",
+  "Price": 445,
+  "Lien": " https://www.relaischateaux.com/us/france/lavilla-haute-corse-calvi "
+ },
+ {
+  "Hotel": "Château d’Audrieu",
+  "Departement": " (Calvados)",
+  "NumberOfRooms": " 30Rooms",
+  "Price": 204,
+  "Lien": " https://www.relaischateaux.com/us/france/audrieu-calvados-audrieu "
+ },
+ {
+  "Hotel": "Bas Rupts",
+  "Departement": " (Vosges)",
+  "NumberOfRooms": " 24Rooms",
+  "Price": 160,
+  "Lien": " https://www.relaischateaux.com/us/france/basrupts-vosges-gerardmer "
+ },
+ {
+  "Hotel": "La Ferme Saint-Siméon",
+  "Departement": " (Calvados)",
+  "NumberOfRooms": " 34Rooms",
+  "Price": 156,
+  "Lien": " https://www.relaischateaux.com/us/france/simeon-calvados-honfleur "
+ },
+ {
+  "Hotel": "Hôtel Restaurant Clos des Sens - Laurent PETIT",
+  "Departement": " (Haute-Savoie)",
+  "NumberOfRooms": " 11Rooms",
+  "Price": 230,
+  "Lien": " https://www.relaischateaux.com/us/france/clos-des-sens-haute-savoie "
+ },
+ {
+  "Hotel": "Les Hauts de Loire",
+  "Departement": " (Loir-et-Cher)",
+  "NumberOfRooms": " 31Rooms",
+  "Price": 175,
+  "Lien": " https://www.relaischateaux.com/us/france/hauts-loire-loir-et-cher-onzain "
+ },
+ {
+  "Hotel": "Hôtel du Bois Blanc",
+  "Departement": " (Ain)",
+  "NumberOfRooms": " 18Rooms",
+  "Price": 129,
+  "Lien": " https://www.relaischateaux.com/us/france/hotel-du-bois-blanc-ain-vonnas "
+ },
+ {
+  "Hotel": "Hôtel Impérial Garoupe",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 35Rooms",
+  "Price": 360,
+  "Lien": " https://www.relaischateaux.com/us/france/garoupe-alpes-maritimes-cap-d-antibes "
+ },
+ {
+  "Hotel": "Le Phébus & Spa - Villa des Anges",
+  "Departement": " (Vaucluse)",
+  "NumberOfRooms": " 29Rooms&1 villa",
+  "Price": 210,
+  "Lien": " https://www.relaischateaux.com/us/france/phebus-vaucluse-gordes "
+ },
+ {
+  "Hotel": "Les Bergeries de Palombaggia",
+  "Departement": " (Corse du sud)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 228,
+  "Lien": " https://www.relaischateaux.com/us/france/palombaggia-corse-du-sud-porto-vecchio "
+ },
+ {
+  "Hotel": "Le Grand Cœur & Spa",
+  "Departement": " (Savoie)",
+  "NumberOfRooms": " 42Rooms",
+  "Price": 355,
+  "Lien": " https://www.relaischateaux.com/us/france/grandcoeur-savoie-meribel "
+ },
+ {
+  "Hotel": "Restaurant Serge Vieira",
+  "Departement": " (Cantal)",
+  "NumberOfRooms": " 3Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/vieira-cantal "
+ },
+ {
+  "Hotel": "La Bastide Saint-Antoine",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 176,
+  "Lien": " https://www.relaischateaux.com/us/france/saintantoine-alpes-maritimes-grasse "
+ },
+ {
+  "Hotel": "La Grande Maison de Bernard Magrez",
+  "Departement": " (Gironde)",
+  "NumberOfRooms": " 6Rooms",
+  "Price": 293,
+  "Lien": " https://www.relaischateaux.com/us/france/grande-maison-bernard-magrez-gironde-bordeaux "
+ },
+ {
+  "Hotel": "Hostellerie de Levernois",
+  "Departement": " (Côte-d’Or)",
+  "NumberOfRooms": " 26Rooms",
+  "Price": 150,
+  "Lien": " https://www.relaischateaux.com/us/france/levernois-cote-d-or-levernois-beaune "
+ },
+ {
+  "Hotel": "Pan Deï Palais",
+  "Departement": " (Var)",
+  "NumberOfRooms": " 12Rooms",
+  "Price": 250,
+  "Lien": " https://www.relaischateaux.com/us/france/pandei-var-saint-tropez "
+ },
+ {
+  "Hotel": "Hôtel et Restaurant Régis et Jacques Marcon",
+  "Departement": " (Haute-Loire)",
+  "NumberOfRooms": " 10Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/cimes-haute-loire-saint-bonnet-le-froid "
+ },
+ {
+  "Hotel": "Château de Germigney",
+  "Departement": " (Jura)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 130,
+  "Lien": " https://www.relaischateaux.com/us/france/germigney-jura-port-lesney "
+ },
+ {
+  "Hotel": "La Côte Saint Jacques & Spa",
+  "Departement": " (Yonne)",
+  "NumberOfRooms": " 22Rooms",
+  "Price": 224,
+  "Lien": " https://www.relaischateaux.com/us/france/la-cote-saint-jacques-yonne-joigny "
+ },
+ {
+  "Hotel": "Maison Lameloise",
+  "Departement": " (Saône-et-Loire)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 180,
+  "Lien": " https://www.relaischateaux.com/us/france/lameloise-saone-et-loire-chagny "
+ },
+ {
+  "Hotel": "Le Mas de Pierre",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 54Rooms&1 villa",
+  "Price": 162,
+  "Lien": " https://www.relaischateaux.com/us/france/maspierre-alpes-maritimes-saint-paul-de-vence "
+ },
+ {
+  "Hotel": "Hostellerie La Briqueterie",
+  "Departement": " (Marne)",
+  "NumberOfRooms": " 40Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/briqueterie-marne-vinay "
+ },
+ {
+  "Hotel": "Le Saint-Paul",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 245,
+  "Lien": " https://www.relaischateaux.com/us/france/stpaul-alpes-maritimes-saint-paul-de-vence "
+ },
+ {
+  "Hotel": "Maison Doucet",
+  "Departement": " (Saône et Loire)",
+  "NumberOfRooms": " 18Rooms",
+  "Price": 123,
+  "Lien": " https://www.relaischateaux.com/us/france/hotel-laposte-doucet-saone-et-loire "
+ },
+ {
+  "Hotel": "Auberge des Templiers",
+  "Departement": " (Loiret)",
+  "NumberOfRooms": " 24Rooms",
+  "Price": 112.2,
+  "Lien": " https://www.relaischateaux.com/us/france/templiers-loiret-boismorand "
+ },
+ {
+  "Hotel": "La Pyramide Patrick Henriroux",
+  "Departement": " (Isère)",
+  "NumberOfRooms": " 23Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/pyramide-isere-vienne "
+ },
+ {
+  "Hotel": "Jiva Hill Resort",
+  "Departement": " (Ain)",
+  "NumberOfRooms": " 33Rooms",
+  "Price": 290,
+  "Lien": " https://www.relaischateaux.com/us/france/jivahill-ain-crozet "
+ },
+ {
+  "Hotel": "Château Lafaurie-Peyraguey Hôtel & Restaurant LALIQUE",
+  "Departement": " (Gironde)",
+  "NumberOfRooms": " 13Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/chateau-lafaurie-peyraguey-lalique-bommes "
+ },
+ {
+  "Hotel": "Le Petit Nice-Passedat",
+  "Departement": " (Bouches-du-Rhône)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 220,
+  "Lien": " https://www.relaischateaux.com/us/france/passedat-bouches-du-rhone-marseille "
+ },
+ {
+  "Hotel": "Château d’Adoménil",
+  "Departement": " (Meurthe-et-Moselle)",
+  "NumberOfRooms": " 14Rooms",
+  "Price": 195,
+  "Lien": " https://www.relaischateaux.com/us/france/adomenil-meurthe-et-moselle-luneville "
+ },
+ {
+  "Hotel": "Le Chambard",
+  "Departement": " (Haut-Rhin)",
+  "NumberOfRooms": " 32Rooms",
+  "Price": 182,
+  "Lien": " https://www.relaischateaux.com/us/france/le-chambard-haut-rhin-kaysersberg "
+ },
+ {
+  "Hotel": "Château de Mercuès",
+  "Departement": " (Lot)",
+  "NumberOfRooms": " 30Rooms",
+  "Price": 198,
+  "Lien": " https://www.relaischateaux.com/us/france/mercues-lot-mercues "
+ },
+ {
+  "Hotel": "Grand Hôtel de Cala Rossa & Spa",
+  "Departement": " (Corse)",
+  "NumberOfRooms": " 35Rooms",
+  "Price": 220,
+  "Lien": " https://www.relaischateaux.com/us/france/calarossa-corse-porto-vecchio "
+ },
+ {
+  "Hotel": "Moulin de l’Abbaye",
+  "Departement": " (Dordogne)",
+  "NumberOfRooms": " 20Rooms",
+  "Price": 145,
+  "Lien": " https://www.relaischateaux.com/us/france/moulin-dordogne-brantome-en-perigord "
+ },
+ {
+  "Hotel": "Maison Decoret",
+  "Departement": " (Allier)",
+  "NumberOfRooms": " 5Rooms",
+  "Price": 117.81,
+  "Lien": " https://www.relaischateaux.com/us/france/decoret-allier-vichy "
+ },
+ {
+  "Hotel": "Hôtel & Spa du Castellet",
+  "Departement": " (Var)",
+  "NumberOfRooms": " 42Rooms",
+  "Price": 208,
+  "Lien": " https://www.relaischateaux.com/us/france/castellet-var-le-castellet "
+ },
+ {
+  "Hotel": "Hôtel Restaurant En Marge",
+  "Departement": " (Haute-Garonne)",
+  "NumberOfRooms": " 5Rooms",
+  "Price": 0,
+  "Lien": " https://www.relaischateaux.com/us/france/hotel-restaurant-en-marge-aureville "
+ },
+ {
+  "Hotel": "Hotel Ile de la Lagune Thalasso & Spa",
+  "Departement": " (Pyrénées-Orientales)",
+  "NumberOfRooms": " 24Rooms",
+  "Price": 161,
+  "Lien": " https://www.relaischateaux.com/us/france/ile-de-la-lagune-saint-cyprien "
+ },
+ {
+  "Hotel": "Château de Rochegude",
+  "Departement": " (Drôme)",
+  "NumberOfRooms": " 25Rooms",
+  "Price": 119,
+  "Lien": " https://www.relaischateaux.com/us/france/rochegude-drome-rochegude "
+ },
+ {
+  "Hotel": "Hameau Albert Ier",
+  "Departement": " (Haute-Savoie)",
+  "NumberOfRooms": " 37Rooms",
+  "Price": 151,
+  "Lien": " https://www.relaischateaux.com/us/france/albert-haute-savoie-chamonix-mont-blanc "
+ },
+ {
+  "Hotel": "La Bastide",
+  "Departement": " (Gers)",
+  "NumberOfRooms": " 29Rooms",
+  "Price": 170,
+  "Lien": " https://www.relaischateaux.com/us/france/labastide-gers-barbotan-les-thermes "
+ },
+ {
+  "Hotel": "Cap d’Antibes Beach Hotel",
+  "Departement": " (Alpes-Maritimes)",
+  "NumberOfRooms": " 35Rooms",
+  "Price": 294,
+  "Lien": " https://www.relaischateaux.com/us/france/antibes-alpes-maritimes-cap-d-antibes "
+ },
+ {
+  "Hotel": "Les Hautes Roches",
+  "Departement": " (Indre-et-Loire)",
+  "NumberOfRooms": " 14Rooms",
+  "Price": 165,
+  "Lien": " https://www.relaischateaux.com/us/france/hautesroches-indre-et-loire-rochecorbon "
+ },
+ {
+  "Hotel": "Château de Riell",
+  "Departement": " (Pyrénées-Orientales)",
+  "NumberOfRooms": " 17Rooms",
+  "Price": 136,
+  "Lien": " https://www.relaischateaux.com/us/france/riell-pyrenees-orientales-prades "
+ },
+ {
+  "Hotel": "Hôtel Crillon le Brave",
+  "Departement": " (Vaucluse)",
+  "NumberOfRooms": " 33Rooms",
+  "Price": 400,
+  "Lien": " https://www.relaischateaux.com/us/france/crillonbrave-vaucluse-crillon-le-brave "
+ },
+ {
+  "Hotel": "Villa Florentine",
+  "Departement": " (Rhône)",
+  "NumberOfRooms": " 28Rooms",
+  "Price": 195,
+  "Lien": " https://www.relaischateaux.com/us/france/florentine-rhone-lyon "
+ },
+ {
+  "Hotel": "Domaine de Rochevilaine",
+  "Departement": " (Morbihan)",
+  "NumberOfRooms": " 37Rooms",
+  "Price": 192,
+  "Lien": " https://www.relaischateaux.com/us/france/rochevilaine-morbihan-billiers "
+ },
+ {
+  "Hotel": "Château de Noizay",
+  "Departement": " (Indre-et-Loire)",
+  "NumberOfRooms": " 19Rooms",
+  "Price": 235,
+  "Lien": " https://www.relaischateaux.com/us/france/noizay-indre-et-loire-noizay "
+ },
+ {
+  "Hotel": "Château de Valmer",
+  "Departement": " (Var)",
+  "NumberOfRooms": " 45Rooms",
+  "Price": 244,
+  "Lien": " https://www.relaischateaux.com/us/france/chateau-de-valmer-la-croix-valmer "
+ },
+ {
+  "Hotel": "Grand Hôtel du Lion d’Or",
+  "Departement": " (Loir-et-Cher)",
+  "NumberOfRooms": " 16Rooms",
+  "Price": 171,
+  "Lien": " https://www.relaischateaux.com/us/france/liondor-loir-et-cher-romorantin-lanthenay "
+ }
+]
+
+//list of chef in each hotel&restaurant from relais chateaux
+const chef = [
+ {
+  "Hotel": "Hotel & Restaurant Thierry Drapeau",
+  "Zipcode": 85260,
+  "Chef": " Thierry Drapeau "
+ },
+ {
+  "Hotel": "Maison Decoret",
+  "Zipcode": 3200,
+  "Chef": " Jacques Decoret "
+ },
+ {
+  "Hotel": "Lucas Carton",
+  "Zipcode": 75008,
+  "Chef": " Julien Dumas "
+ },
+ {
+  "Hotel": "Baumanière Hôtel & Spa",
+  "Zipcode": 13520,
+  "Chef": " Glenn Viel "
+ },
+ {
+  "Hotel": "Michel Trama",
+  "Zipcode": 47270,
+  "Chef": " Michel Trama "
+ },
+ {
+  "Hotel": "Hotel Ile de la Lagune Thalasso & Spa",
+  "Zipcode": 66750,
+  "Chef": " Christophe Schmitt "
+ },
+ {
+  "Hotel": "Georges Blanc Parc & Spa",
+  "Zipcode": 1540,
+  "Chef": " Georges Blanc "
+ },
+ {
+  "Hotel": "Château de Drudas",
+  "Zipcode": 31480,
+  "Chef": " Axell Boisselier "
+ },
+ {
+  "Hotel": "Les Hautes Roches",
+  "Zipcode": 37210,
+  "Chef": " Didier Edon "
+ },
+ {
+  "Hotel": "Auberge du Jeu de Paume",
+  "Zipcode": 60500,
+  "Chef": " Julien Lucas "
+ },
+ {
+  "Hotel": "Monte-Carlo Beach",
+  "Zipcode": 6190,
+  "Chef": " Paolo Sari "
+ },
+ {
+  "Hotel": "Les Prés d’Eugénie - Maison Guérard",
+  "Zipcode": 40320,
+  "Chef": " Michel Guérard "
+ },
+ {
+  "Hotel": "La Chapelle Saint-Martin",
+  "Zipcode": 87510,
+  "Chef": " Gilles Dudognon "
+ },
+ {
+  "Hotel": "Hôtel Splendide Royal Paris",
+  "Zipcode": 75008,
+  "Chef": " Vito Grippa "
+ },
+ {
+  "Hotel": "La Signoria & Spa",
+  "Zipcode": 20260,
+  "Chef": " Alexandre Fabris "
+ },
+ {
+  "Hotel": "La Bastide",
+  "Zipcode": 32150,
+  "Chef": " Jérôme Artiguebère "
+ },
+ {
+  "Hotel": "Restaurant Alexandre",
+  "Zipcode": 30128,
+  "Chef": " Michel Kayser "
+ },
+ {
+  "Hotel": "L’Hôtel de Toiras & Villa Clarisse",
+  "Zipcode": 17410,
+  "Chef": " Antonio Sanna "
+ },
+ {
+  "Hotel": "Domaine de la Bretesche Golf & Spa",
+  "Zipcode": 44780,
+  "Chef": " Frédéric Murati "
+ },
+ {
+  "Hotel": "La Grande Maison de Bernard Magrez",
+  "Zipcode": 33000,
+  "Chef": " Jean-Denis Le Bras - Pierre Gagnaire "
+ },
+ {
+  "Hotel": "L'Auberge Basque",
+  "Zipcode": 64310,
+  "Chef": " Cédric Béchade "
+ },
+ {
+  "Hotel": "Château de Codignat",
+  "Zipcode": 63190,
+  "Chef": " Mathieu Barbet "
+ },
+ {
+  "Hotel": "L’Arnsbourg Restaurant et Hôtel",
+  "Zipcode": 57230,
+  "Chef": " Fabien Mengus "
+ },
+ {
+  "Hotel": "Hostellerie de Levernois",
+  "Zipcode": 21200,
+  "Chef": " Philippe Augé "
+ },
+ {
+  "Hotel": "Château de Noirieux",
+  "Zipcode": 49125,
+  "Chef": " Christophe Guillemot "
+ },
+ {
+  "Hotel": "Restaurant Christopher Coutanceau",
+  "Zipcode": 17000,
+  "Chef": " Christopher Coutanceau "
+ },
+ {
+  "Hotel": "Les Bergeries de Palombaggia",
+  "Zipcode": 20137,
+  "Chef": " Jean-Jacques Gauthier "
+ },
+ {
+  "Hotel": "Pierre Gagnaire",
+  "Zipcode": 75008,
+  "Chef": " Pierre Gagnaire "
+ },
+ {
+  "Hotel": "Le Phébus & Spa - Villa des Anges",
+  "Zipcode": 84220,
+  "Chef": " Xavier Mathieu "
+ },
+ {
+  "Hotel": "Le Couvent des Minimes Hôtel & Spa L'Occitane",
+  "Zipcode": 4300,
+  "Chef": " Jérôme ROY "
+ },
+ {
+  "Hotel": "Château des Avenières",
+  "Zipcode": 74350,
+  "Chef": " Anthony Laboubé "
+ },
+ {
+  "Hotel": "Restaurant Gill",
+  "Zipcode": 76000,
+  "Chef": " Gilles Tournadre "
+ },
+ {
+  "Hotel": "Le Saint-James Bouliac",
+  "Zipcode": 33270,
+  "Chef": " Nicolas Magie "
+ },
+ {
+  "Hotel": "Auberge des Templiers",
+  "Zipcode": 45290,
+  "Chef": " Martin Simonart "
+ },
+ {
+  "Hotel": "Le Petit Nice-Passedat",
+  "Zipcode": 13007,
+  "Chef": " Gérald Passedat "
+ },
+ {
+  "Hotel": "Restaurant Guy Lassausaie",
+  "Zipcode": 69380,
+  "Chef": " Guy Lassausaie "
+ },
+ {
+  "Hotel": "Le Chambard",
+  "Zipcode": 68240,
+  "Chef": " Olivier Nasti "
+ },
+ {
+  "Hotel": "Domaine Les Crayères",
+  "Zipcode": 51100,
+  "Chef": " Philippe Mille "
+ },
+ {
+  "Hotel": "Château d’Audrieu",
+  "Zipcode": 14250,
+  "Chef": " Olivier Barbarin "
+ },
+ {
+  "Hotel": "L’Oasis",
+  "Zipcode": 6210,
+  "Chef": " Alain Montigny "
+ },
+ {
+  "Hotel": "Hôtel-Spa La Bouitte – Restaurant René et Maxime Meilleur",
+  "Zipcode": 73440,
+  "Chef": " René and Maxime Meilleur "
+ },
+ {
+  "Hotel": "Les Maisons de Bricourt",
+  "Zipcode": 35350,
+  "Chef": " Olivier & Hugo Roellinger "
+ },
+ {
+  "Hotel": "Domaine d’Auriac",
+  "Zipcode": 11009,
+  "Chef": " Philippe Deschamps "
+ },
+ {
+  "Hotel": "Abbaye de la Bussière",
+  "Zipcode": 21360,
+  "Chef": " Guillaume Royer "
+ },
+ {
+  "Hotel": "Hameau Albert Ier",
+  "Zipcode": 74402,
+  "Chef": " Damien Leveau "
+ },
+ {
+  "Hotel": "Manoir de Lan-Kerellec",
+  "Zipcode": 22560,
+  "Chef": " Anthony Avoine "
+ },
+ {
+  "Hotel": "Hôtel & Spa du Castellet",
+  "Zipcode": 83330,
+  "Chef": " Christophe Bacquié "
+ },
+ {
+  "Hotel": "Château de La Chèvre d’Or",
+  "Zipcode": 6360,
+  "Chef": " Arnaud Faye "
+ },
+ {
+  "Hotel": "Domaine de Rochevilaine",
+  "Zipcode": 56190,
+  "Chef": " Maxime Nouail "
+ },
+ {
+  "Hotel": "Passage 53",
+  "Zipcode": 75002,
+  "Chef": " Shinichi Sato "
+ },
+ {
+  "Hotel": "Les Hauts de Loire",
+  "Zipcode": 41150,
+  "Chef": " Rémy Giraud "
+ },
+ {
+  "Hotel": "La Bonne Étape",
+  "Zipcode": 4160,
+  "Chef": " Jany Gleize "
+ },
+ {
+  "Hotel": "Château de Courcelles",
+  "Zipcode": 2220,
+  "Chef": " Lucas Vannier "
+ },
+ {
+  "Hotel": "Château de Valmer",
+  "Zipcode": 83420,
+  "Chef": " Jimmy Coutel "
+ },
+ {
+  "Hotel": "Bas Rupts",
+  "Zipcode": 88400,
+  "Chef": " Michel Philippe "
+ },
+ {
+  "Hotel": "Le Relais Bernard Loiseau – Spa Loiseau des Sens",
+  "Zipcode": 21210,
+  "Chef": " Patrick Bertron "
+ },
+ {
+  "Hotel": "Maison Pic",
+  "Zipcode": 26000,
+  "Chef": " Anne-Sophie Pic "
+ },
+ {
+  "Hotel": "Château d’Adoménil",
+  "Zipcode": 54300,
+  "Chef": " Cyril Leclerc "
+ },
+ {
+  "Hotel": "Château de Rochegude",
+  "Zipcode": 26790,
+  "Chef": " Thierry Frebout "
+ },
+ {
+  "Hotel": "Villa Gallici",
+  "Zipcode": 13100,
+  "Chef": " Christophe Gavot "
+ },
+ {
+  "Hotel": "Château de Berne",
+  "Zipcode": 83780,
+  "Chef": " Benjamin Collombat "
+ },
+ {
+  "Hotel": "Saint James Paris",
+  "Zipcode": 75116,
+  "Chef": " Adrien Brunet "
+ },
+ {
+  "Hotel": "Château de Montreuil",
+  "Zipcode": 62170,
+  "Chef": " Jean-Marie Le Guen "
+ },
+ {
+  "Hotel": "Le Grand Véfour",
+  "Zipcode": 75001,
+  "Chef": " Guy Martin "
+ },
+ {
+  "Hotel": "Hostellerie La Briqueterie",
+  "Zipcode": 51530,
+  "Chef": " Thomas Debouzy "
+ },
+ {
+  "Hotel": "La Côte Saint Jacques & Spa",
+  "Zipcode": 89300,
+  "Chef": " Jean-Michel Lorain "
+ },
+ {
+  "Hotel": "Le Castel Marie-Louise",
+  "Zipcode": 44504,
+  "Chef": " Eric Mignard "
+ },
+ {
+  "Hotel": "Le Pré Catelan",
+  "Zipcode": 75016,
+  "Chef": " Frédéric Anton "
+ },
+ {
+  "Hotel": "Tiara Yaktsa",
+  "Zipcode": 6590,
+  "Chef": " Guillaume Anor "
+ },
+ {
+  "Hotel": "Château de Locguénolé",
+  "Zipcode": 56700,
+  "Chef": " Jérémie Louis "
+ },
+ {
+  "Hotel": "Hostellerie La Cheneaudière & Spa",
+  "Zipcode": 67420,
+  "Chef": " Roger Bouhassoun "
+ },
+ {
+  "Hotel": "Hôtel de la Plage",
+  "Zipcode": 29550,
+  "Chef": " Yoann Noël "
+ },
+ {
+  "Hotel": "Villa René Lalique",
+  "Zipcode": 67290,
+  "Chef": " Jean-Georges Klein "
+ },
+ {
+  "Hotel": "Château de la Treyne",
+  "Zipcode": 46200,
+  "Chef": " Stéphane Andrieux "
+ },
+ {
+  "Hotel": "Brittany & Spa",
+  "Zipcode": 29681,
+  "Chef": " Loic Le Bail "
+ },
+ {
+  "Hotel": "Le Suquet, Sébastien Bras",
+  "Zipcode": 12210,
+  "Chef": " Sébastien Bras "
+ },
+ {
+  "Hotel": "La Bastide Saint-Antoine",
+  "Zipcode": 6130,
+  "Chef": " Laurent Barberot "
+ },
+ {
+  "Hotel": "La Villa Calvi",
+  "Zipcode": 20260,
+  "Chef": " Jerome Voltzenlogel "
+ },
+ {
+  "Hotel": "Assiette Champenoise",
+  "Zipcode": 51430,
+  "Chef": " Arnaud Lallement "
+ },
+ {
+  "Hotel": "Château de Mercuès",
+  "Zipcode": 46090,
+  "Chef": " Julien Poisot "
+ },
+ {
+  "Hotel": "Restaurant Pierre Orsi",
+  "Zipcode": 69006,
+  "Chef": " Pierre Orsi "
+ },
+ {
+  "Hotel": "La Bastide de Capelongue",
+  "Zipcode": 84480,
+  "Chef": " Édouard Loubet "
+ },
+ {
+  "Hotel": "Yoann Conte – Bord du Lac Hôtel Restaurant",
+  "Zipcode": 74290,
+  "Chef": " Yoann Conte "
+ },
+ {
+  "Hotel": "Hôtel Les Barmes de l'Ours",
+  "Zipcode": 73150,
+  "Chef": " Antoine Gras "
+ },
+ {
+  "Hotel": "La Grenouillère",
+  "Zipcode": 62170,
+  "Chef": " Alexandre Gauthier "
+ },
+ {
+  "Hotel": "La Pyramide Patrick Henriroux",
+  "Zipcode": 38200,
+  "Chef": " Patrick Henriroux "
+ },
+ {
+  "Hotel": "Hôtel Restaurant En Marge",
+  "Zipcode": 31320,
+  "Chef": " Frank Renimel "
+ },
+ {
+  "Hotel": "Relais de la Poste",
+  "Zipcode": 40140,
+  "Chef": " Jean Coussau "
+ },
+ {
+  "Hotel": "Le Club de Cavalière & Spa",
+  "Zipcode": 83980,
+  "Chef": " Marc Dach "
+ },
+ {
+  "Hotel": "Grand Hôtel de Cala Rossa & Spa",
+  "Zipcode": 20137,
+  "Chef": " Pascal Cayeux "
+ },
+ {
+  "Hotel": "Le Mas de Pierre",
+  "Zipcode": 6570,
+  "Chef": " Emmanuel Lehrer "
+ },
+ {
+  "Hotel": "Hôtel Restaurant Clos des Sens - Laurent PETIT",
+  "Zipcode": 74940,
+  "Chef": " Laurent Petit "
+ },
+ {
+  "Hotel": "Jiva Hill Resort",
+  "Zipcode": 1170,
+  "Chef": " Vincent Betton "
+ },
+ {
+  "Hotel": "Hôtel Le Chabichou Restaurants & Spa",
+  "Zipcode": 73120,
+  "Chef": " Michel Rochedy & Stéphane Buron "
+ },
+ {
+  "Hotel": "Château de Noizay",
+  "Zipcode": 37210,
+  "Chef": " Frédéric Collin "
+ },
+ {
+  "Hotel": "Au Crocodile",
+  "Zipcode": 67000,
+  "Chef": " Franck Pelux "
+ },
+ {
+  "Hotel": "Royal Champagne Hotel & Spa",
+  "Zipcode": 0,
+  "Chef": 0
+ },
+ {
+  "Hotel": "Château de Germigney",
+  "Zipcode": 39600,
+  "Chef": " Pierre Basso-Moro "
+ },
+ {
+  "Hotel": "La Réserve",
+  "Zipcode": 81000,
+  "Chef": " Benoit Solomiac "
+ },
+ {
+  "Hotel": "La Maison des Bois – Marc Veyrat",
+  "Zipcode": 74230,
+  "Chef": " Marc Veyrat "
+ },
+ {
+  "Hotel": "Flocons de Sel",
+  "Zipcode": 74120,
+  "Chef": " Emmanuel Renaut "
+ },
+ {
+  "Hotel": "Cazaudehore « La Forestière »",
+  "Zipcode": 78100,
+  "Chef": " Gregory Balland "
+ },
+ {
+  "Hotel": "Castel Clara Thalasso & Spa",
+  "Zipcode": 56360,
+  "Chef": " Franck Moisan "
+ },
+ {
+  "Hotel": "Cap d’Antibes Beach Hotel",
+  "Zipcode": 6160,
+  "Chef": " Nicolas Rondelli "
+ },
+ {
+  "Hotel": "Clarance Hôtel",
+  "Zipcode": 59000,
+  "Chef": " Thibaut Gamba "
+ },
+ {
+  "Hotel": "Maison Lameloise",
+  "Zipcode": 71150,
+  "Chef": " Eric Pras "
+ },
+ {
+  "Hotel": "Maison Rostang",
+  "Zipcode": 75017,
+  "Chef": " Michel Rostang and Nicolas Beaumann "
+ },
+ {
+  "Hotel": "Hôtel Parc Victoria",
+  "Zipcode": 64500,
+  "Chef": " Guillaume Applaincourt "
+ },
+ {
+  "Hotel": "Moulin de l’Abbaye",
+  "Zipcode": 24310,
+  "Chef": " Jean Michel Bardet "
+ },
+ {
+  "Hotel": "La Ferme Saint-Siméon",
+  "Zipcode": 14600,
+  "Chef": " Sébastien Faramond "
+ },
+ {
+  "Hotel": "Coquillade Village",
+  "Zipcode": 84400,
+  "Chef": " Thierry Enderlin "
+ },
+ {
+  "Hotel": "Restaurant Mirazur",
+  "Zipcode": 6500,
+  "Chef": " Mauro Colagreco "
+ },
+ {
+  "Hotel": "Pan Deï Palais",
+  "Zipcode": 83990,
+  "Chef": " Quentin Durand "
+ },
+ {
+  "Hotel": "Hôtel et Restaurant Régis et Jacques Marcon",
+  "Zipcode": 43290,
+  "Chef": " Régis & Jacques Marcon "
+ },
+ {
+  "Hotel": "Le Domaine de Verchant",
+  "Zipcode": 34170,
+  "Chef": " Damien Cousseau "
+ },
+ {
+  "Hotel": "Le Vieux Logis",
+  "Zipcode": 24510,
+  "Chef": " Vincent Arnould "
+ },
+ {
+  "Hotel": "Château de Fonscolombe",
+  "Zipcode": 13610,
+  "Chef": " Nadège Serret "
+ },
+ {
+  "Hotel": "Château de Riell",
+  "Zipcode": 66500,
+  "Chef": " Sébastien Nouveau "
+ },
+ {
+  "Hotel": "Hôtel Impérial Garoupe",
+  "Zipcode": 6600,
+  "Chef": " Pierre-Alain Garnier "
+ },
+ {
+  "Hotel": "Hôtel Crillon le Brave",
+  "Zipcode": 84410,
+  "Chef": " Julien Marseault "
+ },
+ {
+  "Hotel": "Grand Hôtel du Lion d’Or",
+  "Zipcode": 41200,
+  "Chef": " Didier Clément "
+ },
+ {
+  "Hotel": "Au Cœur du Village Hôtel & Spa",
+  "Zipcode": 74220,
+  "Chef": " Cédric Heurtebise & Vincent Deforce "
+ },
+ {
+  "Hotel": "Hôtel Restaurant Auberge du Père Bise – Jean Sulpice",
+  "Zipcode": 0,
+  "Chef": 0
+ },
+ {
+  "Hotel": "Château de Bagnols",
+  "Zipcode": 69620,
+  "Chef": " Jean-Alexandre Ouaratta "
+ },
+ {
+  "Hotel": "Château Cordeillan-Bages",
+  "Zipcode": 33250,
+  "Chef": " Julien Lefebvre "
+ },
+ {
+  "Hotel": "Villa Florentine",
+  "Zipcode": 69005,
+  "Chef": " David Delsart "
+ }
+]
+
+//list of starred restaurants according to michelin guided
+const michelin = [
  {
   "Chef": "Inaki Aizpitarte",
   "Zipcode": 75011,
@@ -3588,3 +5111,44 @@
   "Link": " https://restaurant.michelin.fr/2c5ztru/chateau-dadomenil-luneville "
  }
 ]
+
+// to make sure we have the same number of Hotel and Chef (because normaly, 1 Hotel = 1 Chef)
+function CompteurHotel() {
+  var compteur = 0;
+
+  for (const h of hotelInfo) {
+    compteur++;
+  }
+
+  console.log("nombre d'hotel :" , compteur);
+}
+function CompteurChef() {
+  var compteur = 0;
+
+  for (const c of chef) {
+    compteur++;
+  }
+
+  console.log("nombre de chefs :" , compteur);
+}
+//CompteurHotel(); //=126
+//CompteurChef(); //=126
+
+// how many equivalence between the chefs scraped on relais chateaux and those on michelin
+// (beware of the zipcode, it needs to be the same)
+function Equivalence() {
+  var compteur = 0;
+
+  for (const c of chef) {
+    for (const m of michelin) {
+      if (c.Chef === (" " + m.Chef + " ") && c.Zipcode === m.Zipcode) {
+        compteur++;
+        console.log(c.Chef, c.Zipcode);
+      }
+    }
+  }
+
+  console.log(compteur);
+}
+
+Equivalence();

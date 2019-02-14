@@ -1,0 +1,632 @@
+[
+ {
+  "Hotel": "Hotel & Restaurant Thierry Drapeau",
+  "Zipcode": 85260,
+  "Chef": " Thierry Drapeau "
+ },
+ {
+  "Hotel": "Maison Decoret",
+  "Zipcode": 3200,
+  "Chef": " Jacques Decoret "
+ },
+ {
+  "Hotel": "Lucas Carton",
+  "Zipcode": 75008,
+  "Chef": " Julien Dumas "
+ },
+ {
+  "Hotel": "Baumanière Hôtel & Spa",
+  "Zipcode": 13520,
+  "Chef": " Glenn Viel "
+ },
+ {
+  "Hotel": "Michel Trama",
+  "Zipcode": 47270,
+  "Chef": " Michel Trama "
+ },
+ {
+  "Hotel": "Hotel Ile de la Lagune Thalasso & Spa",
+  "Zipcode": 66750,
+  "Chef": " Christophe Schmitt "
+ },
+ {
+  "Hotel": "Georges Blanc Parc & Spa",
+  "Zipcode": 1540,
+  "Chef": " Georges Blanc "
+ },
+ {
+  "Hotel": "Château de Drudas",
+  "Zipcode": 31480,
+  "Chef": " Axell Boisselier "
+ },
+ {
+  "Hotel": "Les Hautes Roches",
+  "Zipcode": 37210,
+  "Chef": " Didier Edon "
+ },
+ {
+  "Hotel": "Auberge du Jeu de Paume",
+  "Zipcode": 60500,
+  "Chef": " Julien Lucas "
+ },
+ {
+  "Hotel": "Monte-Carlo Beach",
+  "Zipcode": 6190,
+  "Chef": " Paolo Sari "
+ },
+ {
+  "Hotel": "Les Prés d’Eugénie - Maison Guérard",
+  "Zipcode": 40320,
+  "Chef": " Michel Guérard "
+ },
+ {
+  "Hotel": "La Chapelle Saint-Martin",
+  "Zipcode": 87510,
+  "Chef": " Gilles Dudognon "
+ },
+ {
+  "Hotel": "Hôtel Splendide Royal Paris",
+  "Zipcode": 75008,
+  "Chef": " Vito Grippa "
+ },
+ {
+  "Hotel": "La Signoria & Spa",
+  "Zipcode": 20260,
+  "Chef": " Alexandre Fabris "
+ },
+ {
+  "Hotel": "La Bastide",
+  "Zipcode": 32150,
+  "Chef": " Jérôme Artiguebère "
+ },
+ {
+  "Hotel": "Restaurant Alexandre",
+  "Zipcode": 30128,
+  "Chef": " Michel Kayser "
+ },
+ {
+  "Hotel": "L’Hôtel de Toiras & Villa Clarisse",
+  "Zipcode": 17410,
+  "Chef": " Antonio Sanna "
+ },
+ {
+  "Hotel": "Domaine de la Bretesche Golf & Spa",
+  "Zipcode": 44780,
+  "Chef": " Frédéric Murati "
+ },
+ {
+  "Hotel": "La Grande Maison de Bernard Magrez",
+  "Zipcode": 33000,
+  "Chef": " Jean-Denis Le Bras - Pierre Gagnaire "
+ },
+ {
+  "Hotel": "L'Auberge Basque",
+  "Zipcode": 64310,
+  "Chef": " Cédric Béchade "
+ },
+ {
+  "Hotel": "Château de Codignat",
+  "Zipcode": 63190,
+  "Chef": " Mathieu Barbet "
+ },
+ {
+  "Hotel": "L’Arnsbourg Restaurant et Hôtel",
+  "Zipcode": 57230,
+  "Chef": " Fabien Mengus "
+ },
+ {
+  "Hotel": "Hostellerie de Levernois",
+  "Zipcode": 21200,
+  "Chef": " Philippe Augé "
+ },
+ {
+  "Hotel": "Château de Noirieux",
+  "Zipcode": 49125,
+  "Chef": " Christophe Guillemot "
+ },
+ {
+  "Hotel": "Restaurant Christopher Coutanceau",
+  "Zipcode": 17000,
+  "Chef": " Christopher Coutanceau "
+ },
+ {
+  "Hotel": "Les Bergeries de Palombaggia",
+  "Zipcode": 20137,
+  "Chef": " Jean-Jacques Gauthier "
+ },
+ {
+  "Hotel": "Pierre Gagnaire",
+  "Zipcode": 75008,
+  "Chef": " Pierre Gagnaire "
+ },
+ {
+  "Hotel": "Le Phébus & Spa - Villa des Anges",
+  "Zipcode": 84220,
+  "Chef": " Xavier Mathieu "
+ },
+ {
+  "Hotel": "Le Couvent des Minimes Hôtel & Spa L'Occitane",
+  "Zipcode": 4300,
+  "Chef": " Jérôme ROY "
+ },
+ {
+  "Hotel": "Château des Avenières",
+  "Zipcode": 74350,
+  "Chef": " Anthony Laboubé "
+ },
+ {
+  "Hotel": "Restaurant Gill",
+  "Zipcode": 76000,
+  "Chef": " Gilles Tournadre "
+ },
+ {
+  "Hotel": "Le Saint-James Bouliac",
+  "Zipcode": 33270,
+  "Chef": " Nicolas Magie "
+ },
+ {
+  "Hotel": "Auberge des Templiers",
+  "Zipcode": 45290,
+  "Chef": " Martin Simonart "
+ },
+ {
+  "Hotel": "Le Petit Nice-Passedat",
+  "Zipcode": 13007,
+  "Chef": " Gérald Passedat "
+ },
+ {
+  "Hotel": "Restaurant Guy Lassausaie",
+  "Zipcode": 69380,
+  "Chef": " Guy Lassausaie "
+ },
+ {
+  "Hotel": "Le Chambard",
+  "Zipcode": 68240,
+  "Chef": " Olivier Nasti "
+ },
+ {
+  "Hotel": "Domaine Les Crayères",
+  "Zipcode": 51100,
+  "Chef": " Philippe Mille "
+ },
+ {
+  "Hotel": "Château d’Audrieu",
+  "Zipcode": 14250,
+  "Chef": " Olivier Barbarin "
+ },
+ {
+  "Hotel": "L’Oasis",
+  "Zipcode": 6210,
+  "Chef": " Alain Montigny "
+ },
+ {
+  "Hotel": "Hôtel-Spa La Bouitte – Restaurant René et Maxime Meilleur",
+  "Zipcode": 73440,
+  "Chef": " René and Maxime Meilleur "
+ },
+ {
+  "Hotel": "Les Maisons de Bricourt",
+  "Zipcode": 35350,
+  "Chef": " Olivier & Hugo Roellinger "
+ },
+ {
+  "Hotel": "Domaine d’Auriac",
+  "Zipcode": 11009,
+  "Chef": " Philippe Deschamps "
+ },
+ {
+  "Hotel": "Abbaye de la Bussière",
+  "Zipcode": 21360,
+  "Chef": " Guillaume Royer "
+ },
+ {
+  "Hotel": "Hameau Albert Ier",
+  "Zipcode": 74402,
+  "Chef": " Damien Leveau "
+ },
+ {
+  "Hotel": "Manoir de Lan-Kerellec",
+  "Zipcode": 22560,
+  "Chef": " Anthony Avoine "
+ },
+ {
+  "Hotel": "Hôtel & Spa du Castellet",
+  "Zipcode": 83330,
+  "Chef": " Christophe Bacquié "
+ },
+ {
+  "Hotel": "Château de La Chèvre d’Or",
+  "Zipcode": 6360,
+  "Chef": " Arnaud Faye "
+ },
+ {
+  "Hotel": "Domaine de Rochevilaine",
+  "Zipcode": 56190,
+  "Chef": " Maxime Nouail "
+ },
+ {
+  "Hotel": "Passage 53",
+  "Zipcode": 75002,
+  "Chef": " Shinichi Sato "
+ },
+ {
+  "Hotel": "Les Hauts de Loire",
+  "Zipcode": 41150,
+  "Chef": " Rémy Giraud "
+ },
+ {
+  "Hotel": "La Bonne Étape",
+  "Zipcode": 4160,
+  "Chef": " Jany Gleize "
+ },
+ {
+  "Hotel": "Château de Courcelles",
+  "Zipcode": 2220,
+  "Chef": " Lucas Vannier "
+ },
+ {
+  "Hotel": "Château de Valmer",
+  "Zipcode": 83420,
+  "Chef": " Jimmy Coutel "
+ },
+ {
+  "Hotel": "Bas Rupts",
+  "Zipcode": 88400,
+  "Chef": " Michel Philippe "
+ },
+ {
+  "Hotel": "Le Relais Bernard Loiseau – Spa Loiseau des Sens",
+  "Zipcode": 21210,
+  "Chef": " Patrick Bertron "
+ },
+ {
+  "Hotel": "Maison Pic",
+  "Zipcode": 26000,
+  "Chef": " Anne-Sophie Pic "
+ },
+ {
+  "Hotel": "Château d’Adoménil",
+  "Zipcode": 54300,
+  "Chef": " Cyril Leclerc "
+ },
+ {
+  "Hotel": "Château de Rochegude",
+  "Zipcode": 26790,
+  "Chef": " Thierry Frebout "
+ },
+ {
+  "Hotel": "Villa Gallici",
+  "Zipcode": 13100,
+  "Chef": " Christophe Gavot "
+ },
+ {
+  "Hotel": "Château de Berne",
+  "Zipcode": 83780,
+  "Chef": " Benjamin Collombat "
+ },
+ {
+  "Hotel": "Saint James Paris",
+  "Zipcode": 75116,
+  "Chef": " Adrien Brunet "
+ },
+ {
+  "Hotel": "Château de Montreuil",
+  "Zipcode": 62170,
+  "Chef": " Jean-Marie Le Guen "
+ },
+ {
+  "Hotel": "Le Grand Véfour",
+  "Zipcode": 75001,
+  "Chef": " Guy Martin "
+ },
+ {
+  "Hotel": "Hostellerie La Briqueterie",
+  "Zipcode": 51530,
+  "Chef": " Thomas Debouzy "
+ },
+ {
+  "Hotel": "La Côte Saint Jacques & Spa",
+  "Zipcode": 89300,
+  "Chef": " Jean-Michel Lorain "
+ },
+ {
+  "Hotel": "Le Castel Marie-Louise",
+  "Zipcode": 44504,
+  "Chef": " Eric Mignard "
+ },
+ {
+  "Hotel": "Le Pré Catelan",
+  "Zipcode": 75016,
+  "Chef": " Frédéric Anton "
+ },
+ {
+  "Hotel": "Tiara Yaktsa",
+  "Zipcode": 6590,
+  "Chef": " Guillaume Anor "
+ },
+ {
+  "Hotel": "Château de Locguénolé",
+  "Zipcode": 56700,
+  "Chef": " Jérémie Louis "
+ },
+ {
+  "Hotel": "Hostellerie La Cheneaudière & Spa",
+  "Zipcode": 67420,
+  "Chef": " Roger Bouhassoun "
+ },
+ {
+  "Hotel": "Hôtel de la Plage",
+  "Zipcode": 29550,
+  "Chef": " Yoann Noël "
+ },
+ {
+  "Hotel": "Villa René Lalique",
+  "Zipcode": 67290,
+  "Chef": " Jean-Georges Klein "
+ },
+ {
+  "Hotel": "Château de la Treyne",
+  "Zipcode": 46200,
+  "Chef": " Stéphane Andrieux "
+ },
+ {
+  "Hotel": "Brittany & Spa",
+  "Zipcode": 29681,
+  "Chef": " Loic Le Bail "
+ },
+ {
+  "Hotel": "Le Suquet, Sébastien Bras",
+  "Zipcode": 12210,
+  "Chef": " Sébastien Bras "
+ },
+ {
+  "Hotel": "La Bastide Saint-Antoine",
+  "Zipcode": 6130,
+  "Chef": " Laurent Barberot "
+ },
+ {
+  "Hotel": "La Villa Calvi",
+  "Zipcode": 20260,
+  "Chef": " Jerome Voltzenlogel "
+ },
+ {
+  "Hotel": "Assiette Champenoise",
+  "Zipcode": 51430,
+  "Chef": " Arnaud Lallement "
+ },
+ {
+  "Hotel": "Château de Mercuès",
+  "Zipcode": 46090,
+  "Chef": " Julien Poisot "
+ },
+ {
+  "Hotel": "Restaurant Pierre Orsi",
+  "Zipcode": 69006,
+  "Chef": " Pierre Orsi "
+ },
+ {
+  "Hotel": "La Bastide de Capelongue",
+  "Zipcode": 84480,
+  "Chef": " Édouard Loubet "
+ },
+ {
+  "Hotel": "Yoann Conte – Bord du Lac Hôtel Restaurant",
+  "Zipcode": 74290,
+  "Chef": " Yoann Conte "
+ },
+ {
+  "Hotel": "Hôtel Les Barmes de l'Ours",
+  "Zipcode": 73150,
+  "Chef": " Antoine Gras "
+ },
+ {
+  "Hotel": "La Grenouillère",
+  "Zipcode": 62170,
+  "Chef": " Alexandre Gauthier "
+ },
+ {
+  "Hotel": "La Pyramide Patrick Henriroux",
+  "Zipcode": 38200,
+  "Chef": " Patrick Henriroux "
+ },
+ {
+  "Hotel": "Hôtel Restaurant En Marge",
+  "Zipcode": 31320,
+  "Chef": " Frank Renimel "
+ },
+ {
+  "Hotel": "Relais de la Poste",
+  "Zipcode": 40140,
+  "Chef": " Jean Coussau "
+ },
+ {
+  "Hotel": "Le Club de Cavalière & Spa",
+  "Zipcode": 83980,
+  "Chef": " Marc Dach "
+ },
+ {
+  "Hotel": "Grand Hôtel de Cala Rossa & Spa",
+  "Zipcode": 20137,
+  "Chef": " Pascal Cayeux "
+ },
+ {
+  "Hotel": "Le Mas de Pierre",
+  "Zipcode": 6570,
+  "Chef": " Emmanuel Lehrer "
+ },
+ {
+  "Hotel": "Hôtel Restaurant Clos des Sens - Laurent PETIT",
+  "Zipcode": 74940,
+  "Chef": " Laurent Petit "
+ },
+ {
+  "Hotel": "Jiva Hill Resort",
+  "Zipcode": 1170,
+  "Chef": " Vincent Betton "
+ },
+ {
+  "Hotel": "Hôtel Le Chabichou Restaurants & Spa",
+  "Zipcode": 73120,
+  "Chef": " Michel Rochedy & Stéphane Buron "
+ },
+ {
+  "Hotel": "Château de Noizay",
+  "Zipcode": 37210,
+  "Chef": " Frédéric Collin "
+ },
+ {
+  "Hotel": "Au Crocodile",
+  "Zipcode": 67000,
+  "Chef": " Franck Pelux "
+ },
+ {
+  "Hotel": "Royal Champagne Hotel & Spa",
+  "Zipcode": 0,
+  "Chef": 0
+ },
+ {
+  "Hotel": "Château de Germigney",
+  "Zipcode": 39600,
+  "Chef": " Pierre Basso-Moro "
+ },
+ {
+  "Hotel": "La Réserve",
+  "Zipcode": 81000,
+  "Chef": " Benoit Solomiac "
+ },
+ {
+  "Hotel": "La Maison des Bois – Marc Veyrat",
+  "Zipcode": 74230,
+  "Chef": " Marc Veyrat "
+ },
+ {
+  "Hotel": "Flocons de Sel",
+  "Zipcode": 74120,
+  "Chef": " Emmanuel Renaut "
+ },
+ {
+  "Hotel": "Cazaudehore « La Forestière »",
+  "Zipcode": 78100,
+  "Chef": " Gregory Balland "
+ },
+ {
+  "Hotel": "Castel Clara Thalasso & Spa",
+  "Zipcode": 56360,
+  "Chef": " Franck Moisan "
+ },
+ {
+  "Hotel": "Cap d’Antibes Beach Hotel",
+  "Zipcode": 6160,
+  "Chef": " Nicolas Rondelli "
+ },
+ {
+  "Hotel": "Clarance Hôtel",
+  "Zipcode": 59000,
+  "Chef": " Thibaut Gamba "
+ },
+ {
+  "Hotel": "Maison Lameloise",
+  "Zipcode": 71150,
+  "Chef": " Eric Pras "
+ },
+ {
+  "Hotel": "Maison Rostang",
+  "Zipcode": 75017,
+  "Chef": " Michel Rostang and Nicolas Beaumann "
+ },
+ {
+  "Hotel": "Hôtel Parc Victoria",
+  "Zipcode": 64500,
+  "Chef": " Guillaume Applaincourt "
+ },
+ {
+  "Hotel": "Moulin de l’Abbaye",
+  "Zipcode": 24310,
+  "Chef": " Jean Michel Bardet "
+ },
+ {
+  "Hotel": "La Ferme Saint-Siméon",
+  "Zipcode": 14600,
+  "Chef": " Sébastien Faramond "
+ },
+ {
+  "Hotel": "Coquillade Village",
+  "Zipcode": 84400,
+  "Chef": " Thierry Enderlin "
+ },
+ {
+  "Hotel": "Restaurant Mirazur",
+  "Zipcode": 6500,
+  "Chef": " Mauro Colagreco "
+ },
+ {
+  "Hotel": "Pan Deï Palais",
+  "Zipcode": 83990,
+  "Chef": " Quentin Durand "
+ },
+ {
+  "Hotel": "Hôtel et Restaurant Régis et Jacques Marcon",
+  "Zipcode": 43290,
+  "Chef": " Régis & Jacques Marcon "
+ },
+ {
+  "Hotel": "Le Domaine de Verchant",
+  "Zipcode": 34170,
+  "Chef": " Damien Cousseau "
+ },
+ {
+  "Hotel": "Le Vieux Logis",
+  "Zipcode": 24510,
+  "Chef": " Vincent Arnould "
+ },
+ {
+  "Hotel": "Château de Fonscolombe",
+  "Zipcode": 13610,
+  "Chef": " Nadège Serret "
+ },
+ {
+  "Hotel": "Château de Riell",
+  "Zipcode": 66500,
+  "Chef": " Sébastien Nouveau "
+ },
+ {
+  "Hotel": "Hôtel Impérial Garoupe",
+  "Zipcode": 6600,
+  "Chef": " Pierre-Alain Garnier "
+ },
+ {
+  "Hotel": "Hôtel Crillon le Brave",
+  "Zipcode": 84410,
+  "Chef": " Julien Marseault "
+ },
+ {
+  "Hotel": "Grand Hôtel du Lion d’Or",
+  "Zipcode": 41200,
+  "Chef": " Didier Clément "
+ },
+ {
+  "Hotel": "Au Cœur du Village Hôtel & Spa",
+  "Zipcode": 74220,
+  "Chef": " Cédric Heurtebise & Vincent Deforce "
+ },
+ {
+  "Hotel": "Hôtel Restaurant Auberge du Père Bise – Jean Sulpice",
+  "Zipcode": 0,
+  "Chef": 0
+ },
+ {
+  "Hotel": "Château de Bagnols",
+  "Zipcode": 69620,
+  "Chef": " Jean-Alexandre Ouaratta "
+ },
+ {
+  "Hotel": "Château Cordeillan-Bages",
+  "Zipcode": 33250,
+  "Chef": " Julien Lefebvre "
+ },
+ {
+  "Hotel": "Villa Florentine",
+  "Zipcode": 69005,
+  "Chef": " David Delsart "
+ }
+]
