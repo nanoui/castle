@@ -895,7 +895,7 @@ const chef = [
  },
  {
   "Hotel": "Maison Decoret",
-  "Zipcode": 3200,
+  "Zipcode": 32000,
   "Chef": " Jacques Decoret "
  },
  {
@@ -920,7 +920,7 @@ const chef = [
  },
  {
   "Hotel": "Georges Blanc Parc & Spa",
-  "Zipcode": 1540,
+  "Zipcode": 15400,
   "Chef": " Georges Blanc "
  },
  {
@@ -940,7 +940,7 @@ const chef = [
  },
  {
   "Hotel": "Monte-Carlo Beach",
-  "Zipcode": 6190,
+  "Zipcode": 61900,
   "Chef": " Paolo Sari "
  },
  {
@@ -1035,7 +1035,7 @@ const chef = [
  },
  {
   "Hotel": "Le Couvent des Minimes Hôtel & Spa L'Occitane",
-  "Zipcode": 4300,
+  "Zipcode": 43000,
   "Chef": " Jérôme ROY "
  },
  {
@@ -1085,7 +1085,7 @@ const chef = [
  },
  {
   "Hotel": "L’Oasis",
-  "Zipcode": 6210,
+  "Zipcode": 62100,
   "Chef": " Alain Montigny "
  },
  {
@@ -1125,7 +1125,7 @@ const chef = [
  },
  {
   "Hotel": "Château de La Chèvre d’Or",
-  "Zipcode": 6360,
+  "Zipcode": 63600,
   "Chef": " Arnaud Faye "
  },
  {
@@ -1145,12 +1145,12 @@ const chef = [
  },
  {
   "Hotel": "La Bonne Étape",
-  "Zipcode": 4160,
+  "Zipcode": 41600,
   "Chef": " Jany Gleize "
  },
  {
   "Hotel": "Château de Courcelles",
-  "Zipcode": 2220,
+  "Zipcode": 22200,
   "Chef": " Lucas Vannier "
  },
  {
@@ -1230,7 +1230,7 @@ const chef = [
  },
  {
   "Hotel": "Tiara Yaktsa",
-  "Zipcode": 6590,
+  "Zipcode": 65900,
   "Chef": " Guillaume Anor "
  },
  {
@@ -1270,7 +1270,7 @@ const chef = [
  },
  {
   "Hotel": "La Bastide Saint-Antoine",
-  "Zipcode": 6130,
+  "Zipcode": 61300,
   "Chef": " Laurent Barberot "
  },
  {
@@ -1340,7 +1340,7 @@ const chef = [
  },
  {
   "Hotel": "Le Mas de Pierre",
-  "Zipcode": 6570,
+  "Zipcode": 65700,
   "Chef": " Emmanuel Lehrer "
  },
  {
@@ -1350,7 +1350,7 @@ const chef = [
  },
  {
   "Hotel": "Jiva Hill Resort",
-  "Zipcode": 1170,
+  "Zipcode": 11700,
   "Chef": " Vincent Betton "
  },
  {
@@ -1405,7 +1405,7 @@ const chef = [
  },
  {
   "Hotel": "Cap d’Antibes Beach Hotel",
-  "Zipcode": 6160,
+  "Zipcode": 61600,
   "Chef": " Nicolas Rondelli "
  },
  {
@@ -1445,7 +1445,7 @@ const chef = [
  },
  {
   "Hotel": "Restaurant Mirazur",
-  "Zipcode": 6500,
+  "Zipcode": 65000,
   "Chef": " Mauro Colagreco "
  },
  {
@@ -1480,7 +1480,7 @@ const chef = [
  },
  {
   "Hotel": "Hôtel Impérial Garoupe",
-  "Zipcode": 6600,
+  "Zipcode": 66000,
   "Chef": " Pierre-Alain Garnier "
  },
  {
@@ -5134,21 +5134,58 @@ function CompteurChef() {
 //CompteurHotel(); //=126
 //CompteurChef(); //=126
 
-// how many equivalence between the chefs scraped on relais chateaux and those on michelin
-// (beware of the zipcode, it needs to be the same)
+/*
+   how many equivalence between the chefs scraped on relais chateaux and those on michelin
+   (beware of the zipcode, it needs to be the same)        --> 52
+*/
 function Equivalence() {
-  var compteur = 0;
-
+  //var compteur = 0;
   for (const c of chef) {
+    c["Keep"]=0;
     for (const m of michelin) {
       if (c.Chef === (" " + m.Chef + " ") && c.Zipcode === m.Zipcode) {
-        compteur++;
-        console.log(c.Chef, c.Zipcode);
+        //compteur++;
+        //console.log(c.Chef, c.Zipcode);
+        c["Keep"]=1;
       }
     }
   }
+  //console.log(compteur);
+  return chef;
+}
+const newChefArray = Equivalence();
 
-  console.log(compteur);
+/*
+  Combine chef and hotelInfo according to the name of the hotel and keep only those starred in michelin
+  Hotel&restaurant to keep      --> 43
+*/
+function CombineChefHotel() {
+  //var compteur = 0;
+  var toKeep = new Array();
+
+  for (const h of hotelInfo) {
+    for (const c of newChefArray) {
+
+      if((h.Hotel === c.Hotel) && (c.Keep === 1)) {
+        var temp = new Object();
+
+        temp["Hotel"]=h.Hotel;
+        temp["Departement"]=h.Departement;
+        temp["Zipcode"]=c.Zipcode;
+        temp["NumberOfRooms"]=h.NumberOfRooms;
+        temp["Price"]=h.Price;
+        temp["Lien"]=h.Lien;
+        temp["Chef"]=c.Chef;
+        temp["Keep"]=c.Keep;
+
+        toKeep.push(temp);
+        //compteur++;
+      }
+    }
+  }
+  //console.log(compteur);
+  return toKeep;
 }
 
-Equivalence();
+const hotelToKeep = CombineChefHotel();
+console.log(hotelToKeep);
