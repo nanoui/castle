@@ -5186,6 +5186,5 @@ function CombineChefHotel() {
   //console.log(compteur);
   return toKeep;
 }
-
 const hotelToKeep = CombineChefHotel();
 console.log(hotelToKeep);
