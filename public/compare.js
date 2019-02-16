@@ -1,4 +1,5 @@
 "use strict";
+var fs = require("fs");
 
 //list of hotel&restaurant from relais chateaux
 const hotelInfo = [
@@ -5187,4 +5188,12 @@ function CombineChefHotel() {
   return toKeep;
 }
 const hotelToKeep = CombineChefHotel();
-console.log(hotelToKeep);
+//console.log(hotelToKeep);
+
+fs.writeFile("./hotelToKeep.json", JSON.stringify(hotelToKeep, null, 4), (err) => {
+    if (err) {
+        console.error(err);
+        return;
+    };
+    console.log("File has been created");
+});
