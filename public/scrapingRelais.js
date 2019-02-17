@@ -22,7 +22,7 @@ request('https://www.relaischateaux.com/us/site-map/etablissements', (error, res
     var $ = cheerio.load(html);
 
     // all the li in the ul = list of etablissements in France
-    const list = $('#countryF').next().first().children().next();
+    const list = $('#countryF').next().first().children().next(); // accèder 'ul'
     //console.log(list.html());
 
     // to get only the name and link
