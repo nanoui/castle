@@ -1,0 +1,78 @@
+/* ==================================================
+  General
+  ================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'GoudyOldStyleMTW01-Ital','Times New Roman',Times,Georgia,serif;
+  letter-spacing: 0.1vw;
+}
+
+p {
+  line-height: 1.55;
+  color: #ffffff;
+  font-family: 'GoudyOldStyleMTW01-Ital','Times New Roman',Times,Georgia,serif;
+  letter-spacing: 0.1vw;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 4vw;
+  margin-bottom: 65px;
+}
+
+h3 {
+  font-size: 3vw;
+}
+
+h4 {
+  font-size: 2vw;
+}
+
+a {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.title {
+  color: #b7995d;
+  font-size: 1.5vw;
+  font-weight: normal;
+  text-align: center;
+  line-height: 0px;
+}
+
+.info {
+  color: black;
+  font-size: 1.3vw;
+  font-weight: normal;
+  text-align: center;
+}
+
+.btn {
+  background-color: #b7995d;
+  border-color: #b7995d;
+  font-size: 1.5vw;
+}
+
+.btn:hover {
+  background-color: #d1b06f;
+  border-color: #b7995d;
+}
+
+.hotel_display {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  box-shadow: 0px;
+  border-width: thin;
+  border-color: #b7995d;
+}
+
+.input {
+  margin-bottom: 10px;
+  background-color: #f1eadd;
+  border-width: thin;
+  font-size: 1.5vw;
+}

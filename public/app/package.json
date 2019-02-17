@@ -19,6 +19,7 @@
     "react-dom": "^16.8.2"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.2"
+    "@material-ui/core": "^3.9.2",
+    "reactstrap": "^7.1.0"
   }
 }

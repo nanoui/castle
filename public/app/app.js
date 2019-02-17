@@ -11,6 +11,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/bulma';
+import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import style from './app.css';
 
 const toKeep = [
     {
@@ -453,6 +455,7 @@ function searchingFor(term) {
   }
 }
 
+
 // create an App component
 class App extends React.Component {
   constructor(props) {
@@ -477,15 +480,29 @@ class App extends React.Component {
         <div className="container">
           <section className="section">
             <form>
-              <input type="text" onChange={this.searchHandler} />
+              <input type="text" className="input" onChange={this.searchHandler} placeholder="Search..." />
             </form>
             {
                this.state.list.filter(searchingFor(this.state.term)).map( h =>
                  <div key={h.Hotel}>
-                    <h1> Hotel = {h.Hotel}, Zipcode = {h.Zipcode}, Price = {h.Price} </h1>
+                    <Card body className="hotel_display">
+                      <CardTitle className="title">
+                        {h.Hotel} {h.Departement}
+                      </CardTitle>
+                      <CardTitle className="info">
+                        Best price for "{h.Hotel}" : from $(USD){h.Price}
+                      </CardTitle>
+                      <CardTitle className="info">
+                        Our starred restaurant Chef : {h.Chef}
+                      </CardTitle>
+                      <Button href={h.Lien} target="_blank" className="btn">
+                        See Hotel
+                      </Button>
+                    </Card>
                  </div>
                )
             }
+
           </section>
         </div>
       </div>
